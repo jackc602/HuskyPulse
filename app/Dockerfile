@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
 # RUN mkdir /requirements
 # COPY ./src/requirements.txt /requirements/requirements.txt
 
+RUN pip install --upgrade pip wheel setuptools
+
 COPY ./src/requirements.txt .
 
 RUN pip3 install -r requirements.txt
