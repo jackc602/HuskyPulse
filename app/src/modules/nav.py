@@ -38,7 +38,7 @@ def ApiTestNav():
 
 def PredictionNav():
     st.sidebar.page_link(
-        "pages/11_Prediction.py", label="Regression Prediction", icon="📈"
+        "pages/11_Real_Prediction.py", label="Regression Prediction", icon="📈"
     )
 
 
@@ -55,6 +55,11 @@ def AdminPageNav():
         "pages/21_ML_Model_Mgmt.py", label="ML Model Management", icon="🏢"
     )
 
+def ClubHome():
+    st.sidebar.page_link("pages/page01_club_home.py", label="Home")
+
+def ViewPostClub():
+    st.sidebar.page_link("pages/page03_view_post_club.py", label="Posts")
 
 # --------------------------------Links Function -----------------------------------------------
 def SideBarLinks(show_home=False):
@@ -77,6 +82,11 @@ def SideBarLinks(show_home=False):
     # Show the other page navigators depending on the users' role.
     if st.session_state["authenticated"]:
 
+        if st.session_state["role"] == "club_leader":
+            ClubHome()
+            ViewPostClub()
+
+        
         # Show World Bank Link and Map Demo Link if the user is a political strategy advisor role.
         if st.session_state["role"] == "pol_strat_advisor":
             PolStratAdvHomeNav()
