@@ -3,4 +3,5 @@ from modules.nav import SideBarLinks
 
 SideBarLinks()
 
-st.title("Post History")
+st.title("Posts")
+
