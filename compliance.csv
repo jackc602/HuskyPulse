@@ -1,0 +1,101 @@
+id,status,admin_id,club_id,admin_ID,club_ID
+1,Renewed,1,1,24,42
+2,Not Applicable,2,2,57,55
+3,Under Investigation,3,3,37,100
+4,Expired,4,4,18,52
+5,Rejected,5,5,22,24
+6,Waived,6,6,66,26
+7,Completed,7,7,92,14
+8,Overdue,8,8,11,84
+9,Under Investigation,9,9,23,53
+10,Needs Update,10,10,79,87
+11,Completed,11,11,20,32
+12,In Progress,12,12,42,84
+13,Overdue,13,13,79,8
+14,Approved,14,14,15,27
+15,Partially Compliant,15,15,62,17
+16,Pending Review,16,16,72,62
+17,Rejected,17,17,14,17
+18,Completed,18,18,50,46
+19,Escalated,19,19,82,29
+20,Renewed,20,20,31,63
+21,Rejected,21,21,44,61
+22,Expired,22,22,16,43
+23,Non-Compliant,23,23,77,13
+24,Expired,24,24,31,18
+25,Partially Compliant,25,25,47,95
+26,Pending Review,26,26,44,17
+27,Completed,27,27,40,98
+28,Completed,28,28,17,70
+29,Awaiting Approval,29,29,82,46
+30,Needs Update,30,30,2,32
+31,Partially Compliant,31,31,94,68
+32,Not Applicable,32,32,30,61
+33,Not Applicable,33,33,9,57
+34,Non-Compliant,34,34,35,86
+35,Pending Review,35,35,66,16
+36,Needs Update,36,36,27,60
+37,Completed,37,37,69,26
+38,Overdue,38,38,51,12
+39,Partially Compliant,39,39,17,98
+40,Not Applicable,40,40,69,79
+41,Non-Compliant,41,41,86,72
+42,Renewed,42,42,3,36
+43,Needs Update,43,43,31,98
+44,Renewed,44,44,87,81
+45,Non-Compliant,45,45,13,4
+46,Awaiting Approval,46,46,31,45
+47,In Progress,47,47,78,63
+48,Partially Compliant,48,48,75,25
+49,Not Applicable,49,49,4,69
+50,Not Applicable,50,50,77,94
+51,In Progress,51,51,57,54
+52,Needs Update,52,52,17,29
+53,Completed,53,53,68,16
+54,Under Investigation,54,54,52,18
+55,Escalated,55,55,8,51
+56,Approved,56,56,64,63
+57,Needs Update,57,57,32,34
+58,Needs Update,58,58,89,23
+59,Renewed,59,59,56,99
+60,Exempt,60,60,98,63
+61,Completed,61,61,6,84
+62,Overdue,62,62,18,42
+63,Overdue,63,63,75,79
+64,Awaiting Approval,64,64,30,42
+65,Expired,65,65,69,37
+66,Partially Compliant,66,66,66,24
+67,Partially Compliant,67,67,33,84
+68,Escalated,68,68,98,65
+69,Overdue,69,69,40,21
+70,Renewed,70,70,99,54
+71,Needs Update,71,71,74,30
+72,Renewed,72,72,98,63
+73,Partially Compliant,73,73,65,3
+74,Not Applicable,74,74,69,18
+75,Approved,75,75,3,60
+76,Awaiting Approval,76,76,64,7
+77,Under Investigation,77,77,85,18
+78,Partially Compliant,78,78,23,57
+79,Awaiting Approval,79,79,21,3
+80,Submitted,80,80,29,30
+81,Needs Update,81,81,96,37
+82,Completed,82,82,29,19
+83,Needs Update,83,83,37,29
+84,Awaiting Approval,84,84,25,65
+85,Partially Compliant,85,85,60,81
+86,Overdue,86,86,15,83
+87,Pending Review,87,87,62,2
+88,Non-Compliant,88,88,35,94
+89,Exempt,89,89,10,98
+90,Expired,90,90,72,47
+91,Awaiting Approval,91,91,17,100
+92,Partially Compliant,92,92,55,92
+93,Completed,93,93,84,86
+94,Approved,94,94,70,59
+95,Expired,95,95,11,69
+96,Waived,96,96,47,11
+97,Completed,97,97,35,55
+98,Approved,98,98,94,5
+99,Non-Compliant,99,99,54,29
+100,Partially Compliant,100,100,71,94

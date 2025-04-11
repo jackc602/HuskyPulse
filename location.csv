@@ -1,0 +1,101 @@
+id,capacity,building,room_num,address,city,state,zip_code
+1,59,EXP,111308358,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+2,13,Centennial Common,211384162,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+3,87,Churchill Hall,253170305,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+4,12,Dana Research Center,311373125,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+5,36,Centennial Common,021502011,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+6,72,Dana Research Center,084302122,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+7,58,Interdisciplinary Science and Engineering Complex (ISEC),122105249,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+8,11,Churchill Hall,042174509,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+9,39,West Village B,113123654,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+10,50,Interdisciplinary Science and Engineering Complex (ISEC),322271724,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+11,50,Hayden Hall,082902663,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+12,54,Hurtig Hall,091914820,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+13,79,Krentzman Quadrangle,221970443,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+14,29,Speare Hall,221982156,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+15,43,Matthews Arena,103103574,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+16,25,Kariotis Hall,072406771,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+17,43,Speare Hall,271071004,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+18,36,White Hall,107001520,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+19,55,Centennial Common,021301678,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+20,34,Stetson East,104900048,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+21,12,Meserve Hall,021902352,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+22,7,West Village C,092901078,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+23,11,Mugar Life Sciences Building,075000734,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+24,63,Curry Student Center,075912165,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+25,9,Cabot Physical Education Center,062202956,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+26,24,Cabot Physical Education Center,111904192,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+27,22,Mugar Life Sciences Building,041204726,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+28,54,Ryder Hall,113123654,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+29,79,Churchill Hall,071904478,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+30,48,Krentzman Quadrangle,101000789,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+31,10,Dodge Hall,122243664,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+32,98,Kariotis Hall,063200407,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+33,54,White Hall,072404841,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+34,48,Holmes Hall,065301566,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+35,37,Hurtig Hall,111912252,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+36,48,Shillman Hall,021201639,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+37,4,International Village,111914302,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+38,62,Dodge Hall,084200981,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+39,2,West Village A,101014733,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+40,61,Matthews Arena,067012882,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+41,65,Krentzman Quadrangle,104112849,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+42,26,Lake Hall,211174136,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+43,93,Hayden Hall,044115090,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+44,38,Forsyth Building,026002626,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+45,5,Egan Research Center,091902049,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+46,6,Kerr Hall,122243596,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+47,7,Blackman Auditorium,011302933,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+48,90,White Hall,071922968,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+49,16,Blackman Auditorium,021905977,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+50,90,Alumni Center at Columbus Place,307072278,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+51,69,Snell Library,021200575,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+52,20,Churchill Hall,091215529,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+53,30,Robinson Hall,121108250,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+54,33,Stetson East,101107116,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+55,96,International Village,031302955,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+56,28,Richards Hall,102300336,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+57,2,Forsyth Building,052100741,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+58,67,West Village F,063114289,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+59,56,West Village F,107004695,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+60,12,Marino Recreation Center,211871691,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+61,28,Shillman Hall,053208066,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+62,2,Holmes Hall,083900619,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+63,72,Mugar Life Sciences Building,111912605,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+64,97,EXP,242272269,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+65,75,Snell Engineering Center,265371082,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+66,57,Curry Student Center,091215529,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+67,54,Stetson West,122240942,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+68,10,Hurtig Hall,111908758,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+69,56,Matthews Arena,264071590,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+70,70,East Village,072400353,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+71,9,Speare Hall,062102098,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+72,74,Centennial Common,062201533,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+73,16,Kariotis Hall,067016341,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+74,11,East Village,056008852,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+75,1,Stetson East,021410695,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+76,53,West Village B,101104096,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+77,53,Cargill Hall,053112709,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+78,1,White Hall,053112055,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+79,43,Cabot Physical Education Center,053112152,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+80,45,Behrakis Health Sciences Center,111906271,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+81,49,Curry Student Center,092902404,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+82,55,Dockser Hall,103104489,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+83,74,East Village,101204022,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+84,92,Stetson West,075903226,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+85,59,West Village B,075902625,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+86,63,Egan Research Center,062000019,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+87,74,East Village,113024520,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+88,22,Blackman Auditorium,123305378,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+89,51,Hayden Hall,121141288,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+90,39,Snell Library,091204569,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+91,29,Cabot Physical Education Center,065302196,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+92,76,Meserve Hall,102107474,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+93,28,Hayden Hall,031100267,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+94,51,West Village G,091304634,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+95,31,Ryder Hall,031317021,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+96,54,Cargill Hall,043317679,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+97,14,Hurtig Hall,071106250,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+98,75,Lake Hall,271975951,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+99,77,West Village C,021913655,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115
+100,46,Interdisciplinary Science and Engineering Complex (ISEC),101101921,360 Huntington Avenue Boston MA 02115,Boston,Massachusetts,02115

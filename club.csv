@@ -1,0 +1,101 @@
+id,name,type,subject,size
+1,Debate Club,STEM,Indigenous Culture,41
+2,Film Society,Professional,Computer Science,10
+3,Public Health Initiative,Environmental,Media Production,157
+4,Muslim Student Association,Professional,Running,102
+5,Christian Fellowship,Social,Volleyball,193
+6,Nursing Students Association,Language,Mathematics,116
+7,Film Society,Music,Cultural Exchange,77
+8,Environmental Club,Pre-Professional,Latinx Culture,42
+9,Nursing Students Association,Technology,Climate Action,32
+10,Marketing Association,Debate & Public Speaking,Journalism,87
+11,Pre-Med Society,Volunteer & Outreach,Music,34
+12,Public Health Initiative,Theater,Film,51
+13,Coding Club,Academic,Women Empowerment,82
+14,Jazz Ensemble,Arts,Journalism,132
+15,Acapella Group,Entrepreneurship,Meditation,142
+16,Volunteer Corps,Sports,Chemistry,191
+17,Jazz Ensemble,Business,Data Science,123
+18,Sustainability Coalition,Service,Meditation,74
+19,Marketing Association,Environmental,Hiking,174
+20,Mental Health Awareness Club,Entrepreneurship,LGBTQ+ Advocacy,196
+21,Running Club,Health & Wellness,Music,40
+22,Women in Business,Entrepreneurship,Choir,69
+23,First-Gen Student Network,Fitness,Sociology,94
+24,Pre-Law Society,Volunteer & Outreach,International Relations,104
+25,American Society of Civil Engineers,Sports,Anime,31
+26,Community Service Club,Religious,Dance,94
+27,Cultural Exchange Club,Social,Music,65
+28,Marketing Association,Student Government,Christian Fellowship,193
+29,Jazz Ensemble,Service,Theater,38
+30,Christian Fellowship,Sports,History,102
+31,Pre-Law Society,Debate & Public Speaking,Journalism,101
+32,International Student Group,Recreational,Black Student Union,54
+33,Student Government,Sports,Physics,181
+34,International Student Group,Entrepreneurship,Physics,96
+35,Coding Club,Religious,Mathematics,75
+36,Film Society,International,Computer Science,180
+37,Running Club,Media,Women Empowerment,45
+38,Dance Club,Dance,Jewish Student Life,50
+39,Society of Women Engineers,Recreational,Theater,68
+40,International Student Group,Dance,Physics,92
+41,Student Government,Greek Life,Jewish Student Life,189
+42,Community Service Club,Technology,History,166
+43,Nursing Students Association,Sports,Anthropology,151
+44,Data Science Club,Professional,Nursing,173
+45,Coding Club,Cultural,Sociology,28
+46,Jazz Ensemble,Greek Life,Engineering,21
+47,Women in Business,Recreational,Community Service,118
+48,Accounting Society,International,Photography,53
+49,Marketing Association,Music,Engineering,14
+50,Engineering Society,Service,Politics,126
+51,Pre-Law Society,International,Data Science,172
+52,Entrepreneurship Club,Political,Graphic Design,75
+53,LGBTQ+ Alliance,Music,Biology,25
+54,Society of Women Engineers,Media,Photography,143
+55,Running Club,International,Black Student Union,92
+56,Club Basketball,Music,Environmental Sustainability,28
+57,Environmental Club,International,Volunteering,77
+58,Gaming Club,Fitness,Asian Heritage,11
+59,Rock Climbing Club,Sports,Volunteering,69
+60,Running Club,Academic,Engineering,63
+61,Robotics Club,Fitness,Basketball,89
+62,Acapella Group,Health & Wellness,Climate Action,15
+63,Volunteer Corps,Music,Pre-Law,113
+64,Red Cross Club,Academic,Theater,95
+65,Asian American Student Association,Business,Soccer,137
+66,Gaming Club,STEM,Chemistry,78
+67,Model United Nations,Gaming,Cybersecurity,54
+68,Finance and Investment Club,Business,Politics,175
+69,Gaming Club,Professional,Community Service,193
+70,Accounting Society,Service,Climate Action,49
+71,Hillel Jewish Center,Language,Gaming,159
+72,Public Health Initiative,Academic,Choir,196
+73,Community Service Club,Cultural,Physics,3
+74,Photography Club,Fitness,Rock Climbing,102
+75,Running Club,Pre-Professional,Politics,131
+76,Anime Club,Business,Physics,110
+77,LGBTQ+ Alliance,Language,Literature,40
+78,Mental Health Awareness Club,Volunteer & Outreach,Literature,159
+79,International Student Group,Gaming,Jewish Student Life,53
+80,Hillel Jewish Center,Academic,Language Practice,128
+81,Club Basketball,Sports,Journalism,53
+82,Jazz Ensemble,Arts,Asian Heritage,53
+83,Robotics Club,Professional,Accounting,184
+84,Coding Club,Professional,Film,191
+85,Pre-Law Society,Health & Wellness,Yoga,62
+86,Jazz Ensemble,Language,History,180
+87,Christian Fellowship,Pre-Professional,Journalism,21
+88,Cultural Exchange Club,International,Asian Heritage,121
+89,Red Cross Club,Student Government,Women Empowerment,167
+90,Dance Club,Business,Jewish Student Life,53
+91,Anime Club,Greek Life,Marketing,16
+92,Society of Women Engineers,Cultural,Jewish Student Life,60
+93,LGBTQ+ Alliance,Pre-Professional,Mental Health,10
+94,First-Gen Student Network,Theater,Gaming,75
+95,Christian Fellowship,Dance,Anthropology,124
+96,Coding Club,Advocacy,Soccer,56
+97,Model United Nations,Pre-Professional,Christian Fellowship,179
+98,International Student Group,Arts,Photography,72
+99,Student Government,Language,Basketball,44
+100,Engineering Society,STEM,Muslim Student Life,148

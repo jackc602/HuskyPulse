@@ -1,0 +1,101 @@
+id,recipient_id,recipient_type,sender_id,sender_type,content,date_submitted
+1,1,student,1,staff,One thing that stood out was mentoring new members and it helped me grow as a student leader.,9/18/2024
+2,2,faculty,2,faculty,I really enjoyed planning fundraisers and it helped me grow as a student leader.,3/23/2025
+3,3,staff,3,faculty,The team dynamic in running workshops and I felt deeply connected to the community.,11/13/2024
+4,4,faculty,4,faculty,This club gave me insight into planning fundraisers and I felt deeply connected to the community.,3/24/2025
+5,5,other,5,student,What I appreciated most was coordinating logistics and it helped build my confidence.,4/17/2024
+6,6,other,6,other,I'm grateful for the opportunity to be involved in managing social media and I developed strong communication abilities.,5/17/2024
+7,7,staff,7,other,What I appreciated most was creating inclusive spaces and it gave me a sense of purpose.,12/24/2024
+8,8,student,8,staff,One thing that stood out was managing social media and it shaped my career direction.,10/31/2024
+9,9,faculty,9,staff,I gained valuable experience through coordinating logistics and it shaped my career direction.,12/12/2024
+10,10,staff,10,staff,This club gave me insight into organizing events and it shaped my career direction.,6/26/2024
+11,11,other,11,other,One memorable moment from collaborating on a project and it helped me grow as a student leader.,11/17/2024
+12,12,student,12,staff,I gained valuable experience through volunteering with the community and it helped me grow as a student leader.,10/15/2024
+13,13,student,13,other,I really enjoyed participating in debates and it gave me a sense of purpose.,10/23/2024
+14,14,faculty,14,other,I really enjoyed mentoring new members and it helped me grow as a student leader.,11/24/2024
+15,15,staff,15,student,It was amazing to be part of building technical skills which broadened my perspective.,6/12/2024
+16,16,faculty,16,staff,What I appreciated most was coordinating logistics and it gave me a sense of purpose.,1/17/2025
+17,17,other,17,staff,What I appreciated most was participating in debates and I felt deeply connected to the community.,7/12/2024
+18,18,student,18,staff,This club gave me insight into volunteering with the community and I made long-lasting friendships.,10/25/2024
+19,19,staff,19,other,This club gave me insight into creating inclusive spaces and it broadened my perspective.,2/11/2025
+20,20,staff,20,staff,The club helped me grow in leading a committee and it gave me a sense of purpose.,4/18/2024
+21,21,faculty,21,staff,One memorable moment from mentoring new members and it helped me grow as a student leader.,3/2/2025
+22,22,student,22,faculty,This club gave me insight into creating inclusive spaces and it broadened my perspective.,3/25/2025
+23,23,faculty,23,student,This club gave me insight into planning fundraisers and I felt deeply connected to the community.,9/27/2024
+24,24,staff,24,other,What I appreciated most was participating in debates and it gave me a sense of purpose.,10/5/2024
+25,25,other,25,other,I really enjoyed coordinating logistics and it pushed me outside my comfort zone.,11/18/2024
+26,26,other,26,other,I gained valuable experience through coordinating logistics and it shaped my career direction.,11/9/2024
+27,27,staff,27,staff,I'm grateful for the opportunity to be involved in designing promotional materials and it helped me grow as a student leader.,9/6/2024
+28,28,faculty,28,other,I gained valuable experience through managing social media and it helped build my confidence.,6/9/2024
+29,29,student,29,staff,I really enjoyed leading a committee and I developed strong communication abilities.,3/8/2025
+30,30,faculty,30,student,The team dynamic in participating in debates and I felt deeply connected to the community.,2/7/2025
+31,31,staff,31,staff,What I appreciated most was managing social media and it pushed me outside my comfort zone.,5/29/2024
+32,32,faculty,32,other,I really enjoyed mentoring new members and it helped me grow as a student leader.,4/15/2024
+33,33,student,33,other,What I appreciated most was planning fundraisers and I felt deeply connected to the community.,9/26/2024
+34,34,staff,34,student,One thing that stood out was designing promotional materials and I felt deeply connected to the community.,1/22/2025
+35,35,other,35,faculty,I gained valuable experience through coordinating logistics and it shaped my career direction.,8/7/2024
+36,36,other,36,student,I'm grateful for the opportunity to be involved in mentoring new members and it helped me grow as a student leader.,4/27/2024
+37,37,faculty,37,staff,The team dynamic in volunteering with the community and it gave me a sense of purpose.,5/29/2024
+38,38,staff,38,student,This club gave me insight into designing promotional materials which broadened my perspective.,11/6/2024
+39,39,other,39,student,I gained valuable experience through managing social media and it helped build my confidence.,2/27/2025
+40,40,faculty,40,faculty,This club gave me insight into designing promotional materials which broadened my perspective.,10/27/2024
+41,41,student,41,staff,One thing that stood out was planning fundraisers and I made long-lasting friendships.,9/8/2024
+42,42,staff,42,staff,It was amazing to be part of managing social media and it helped build my confidence.,3/23/2025
+43,43,faculty,43,student,One memorable moment from attending national conferences and it gave me a sense of purpose.,12/2/2024
+44,44,staff,44,staff,What I appreciated most was organizing events and it broadened my perspective.,9/7/2024
+45,45,faculty,45,faculty,I'm grateful for the opportunity to be involved in designing promotional materials which broadened my perspective.,11/16/2024
+46,46,student,46,student,This club gave me insight into organizing events and it shaped my career direction.,1/22/2025
+47,47,other,47,other,One memorable moment from volunteering with the community and it shaped my career direction.,11/17/2024
+48,48,other,48,student,I gained valuable experience through managing social media and it helped build my confidence.,10/4/2024
+49,49,student,49,student,I'm grateful for the opportunity to be involved in designing promotional materials and it helped build my confidence.,5/16/2024
+50,50,staff,50,staff,What I appreciated most was participating in debates and it gave me a sense of purpose.,3/9/2025
+51,51,staff,51,student,This club gave me insight into organizing events and it shaped my career direction.,8/3/2024
+52,52,student,52,other,It was amazing to be part of managing social media and it helped build my confidence.,5/31/2024
+53,53,faculty,53,faculty,This club gave me insight into volunteering with the community and I made long-lasting friendships.,8/17/2024
+54,54,student,54,other,This club gave me insight into creating inclusive spaces and it helped me grow as a student leader.,9/4/2024
+55,55,student,55,faculty,I gained valuable experience through coordinating logistics and it shaped my career direction.,2/9/2025
+56,56,faculty,56,student,I'm grateful for the opportunity to be involved in mentoring new members and it helped me grow as a student leader.,1/25/2025
+57,57,staff,57,faculty,This club gave me insight into planning fundraisers and I felt deeply connected to the community.,10/5/2024
+58,58,faculty,58,student,It was amazing to be part of participating in debates and it pushed me outside my comfort zone.,5/6/2024
+59,59,staff,59,staff,What I appreciated most was creating inclusive spaces and it gave me a sense of purpose.,6/24/2024
+60,60,student,60,student,It was amazing to be part of building technical skills which strengthened my leadership skills.,2/13/2025
+61,61,other,61,other,I really enjoyed planning fundraisers and I developed strong communication abilities.,5/18/2024
+62,62,other,62,other,I gained valuable experience through running workshops and I felt deeply connected to the community.,9/2/2024
+63,63,staff,63,staff,This club gave me insight into organizing events and it shaped my career direction.,12/15/2024
+64,64,staff,64,student,The team dynamic in leading a committee and I made long-lasting friendships.,9/13/2024
+65,65,staff,65,staff,I gained valuable experience through running workshops and I felt deeply connected to the community.,12/21/2024
+66,66,staff,66,student,I'm grateful for the opportunity to be involved in mentoring new members and I developed strong communication abilities.,8/30/2024
+67,67,faculty,67,other,I gained valuable experience through running workshops and I felt deeply connected to the community.,7/22/2024
+68,68,staff,68,student,I'm grateful for the opportunity to be involved in designing promotional materials and it helped me grow as a student leader.,12/20/2024
+69,69,other,69,student,What I appreciated most was running workshops and it broadened my perspective.,8/29/2024
+70,70,other,70,faculty,One memorable moment from managing social media and it helped me grow as a student leader.,11/2/2024
+71,71,other,71,faculty,I'm grateful for the opportunity to be involved in designing promotional materials and it helped me grow as a student leader.,7/29/2024
+72,72,faculty,72,student,The team dynamic in leading a committee and I made long-lasting friendships.,5/20/2024
+73,73,student,73,other,I'm grateful for the opportunity to be involved in mentoring new members and I developed strong communication abilities.,2/7/2025
+74,74,student,74,student,I gained valuable experience through collaborating on a project and it gave me a sense of purpose.,11/16/2024
+75,75,faculty,75,other,It was amazing to be part of participating in debates and it pushed me outside my comfort zone.,7/5/2024
+76,76,faculty,76,student,This club gave me insight into leading a committee and it gave me a sense of purpose.,6/14/2024
+77,77,staff,77,faculty,The club helped me grow in participating in debates and I felt deeply connected to the community.,2/7/2025
+78,78,student,78,faculty,I really enjoyed collaborating on a project and it helped me grow as a student leader.,12/19/2024
+79,79,staff,79,other,I really enjoyed mentoring new members and it helped me grow as a student leader.,7/24/2024
+80,80,faculty,80,faculty,I really enjoyed leading a committee and I developed strong communication abilities.,6/25/2024
+81,81,student,81,student,I really enjoyed attending national conferences and it shaped my career direction.,8/15/2024
+82,82,other,82,other,I'm grateful for the opportunity to be involved in attending national conferences and it gave me a sense of purpose.,8/12/2024
+83,83,student,83,other,I gained valuable experience through hosting guest speakers and it helped me grow as a student leader.,4/10/2024
+84,84,other,84,faculty,I gained valuable experience through coordinating logistics and it shaped my career direction.,11/10/2024
+85,85,other,85,faculty,This club gave me insight into mentoring new members and I made long-lasting friendships.,7/10/2024
+86,86,student,86,student,One memorable moment from volunteering with the community and it shaped my career direction.,7/2/2024
+87,87,student,87,faculty,I'm grateful for the opportunity to be involved in coordinating logistics and it helped build my confidence.,7/30/2024
+88,88,other,88,other,The club helped me grow in hosting guest speakers and I made long-lasting friendships.,6/19/2024
+89,89,student,89,staff,I'm grateful for the opportunity to be involved in leading a committee and it pushed me outside my comfort zone.,2/21/2025
+90,90,staff,90,other,One memorable moment from attending national conferences and it gave me a sense of purpose.,1/30/2025
+91,91,faculty,91,other,I gained valuable experience through running workshops and I felt deeply connected to the community.,11/25/2024
+92,92,faculty,92,other,I'm grateful for the opportunity to be involved in volunteering with the community which strengthened my leadership skills.,4/21/2024
+93,93,other,93,faculty,I'm grateful for the opportunity to be involved in building technical skills and I developed strong communication abilities.,7/14/2024
+94,94,student,94,other,It was amazing to be part of attending national conferences and I felt deeply connected to the community.,9/12/2024
+95,95,staff,95,other,What I appreciated most was organizing events and it broadened my perspective.,6/8/2024
+96,96,faculty,96,other,One memorable moment from designing promotional materials and it shaped my career direction.,9/2/2024
+97,97,faculty,97,faculty,What I appreciated most was organizing events and it broadened my perspective.,7/13/2024
+98,98,student,98,faculty,This club gave me insight into managing social media and I made long-lasting friendships.,4/23/2024
+99,99,faculty,99,student,I'm grateful for the opportunity to be involved in designing promotional materials and I made long-lasting friendships.,10/31/2024
+100,100,faculty,100,faculty,What I appreciated most was leading a committee and it helped build my confidence.,6/7/2024

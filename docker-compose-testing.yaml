@@ -26,3 +26,13 @@ services:
       - ./database-files:/docker-entrypoint-initdb.d/:ro
     ports:
       - 3201:3306
+
+# added in env file
+  api:
+    build: ./api
+    env_file:
+      - ./api/.env
+    ports:
+      - "8000:8000" 
+    volumes:
+      - ./api:/app  

@@ -1,0 +1,101 @@
+id,admin_id,content,date_created,admin_ID
+1,1,Facilities maintenance log export - April 2024,7/23/2024,22
+2,2,Presentation slide deck archive - Student-Led Talks,12/22/2024,42
+3,3,Publications archive - Northeastern Literary Society,4/28/2024,54
+4,4,Campus engagement survey results - Northeastern Insights,1/30/2025,99
+5,5,Event registration logs - HackNU 2024,2/20/2025,19
+6,6,Media release forms - Film Society,8/6/2024,86
+7,7,Weekly newsletter drafts - Sustainability Coalition,10/23/2024,28
+8,8,Codebase snapshot - Robotics Club GitHub export,12/31/2024,25
+9,9,Academic advisor notes export - Advising Portal,4/11/2024,97
+10,10,Academic advisor notes export - Advising Portal,9/16/2024,71
+11,11,Campus engagement survey results - Northeastern Insights,2/10/2025,1
+12,12,Past event ticket sales report - Homecoming 2023,10/2/2024,100
+13,13,Project submission archive - Startup Challenge 2024,3/6/2025,99
+14,14,Financial aid award data backup - AY 2023-2024,7/12/2024,87
+15,15,Career fair employer list - April 2024,8/30/2024,48
+16,16,Student grievance submission archive - Ombuds Office,2/19/2025,98
+17,17,Financial aid award data backup - AY 2023-2024,7/13/2024,54
+18,18,Student grievance submission archive - Ombuds Office,12/20/2024,11
+19,19,Past event ticket sales report - Homecoming 2023,4/11/2024,36
+20,20,Volunteer hours log - Community Cleanup April 2024,6/23/2024,5
+21,21,Online poll results export - Club Officer Elections,9/11/2024,59
+22,22,Publications archive - Northeastern Literary Society,11/6/2024,75
+23,23,Volunteer hours log - Community Cleanup April 2024,8/8/2024,26
+24,24,Publications archive - Northeastern Literary Society,5/2/2024,32
+25,25,Codebase snapshot - Robotics Club GitHub export,3/3/2025,94
+26,26,Media release forms - Film Society,12/7/2024,56
+27,27,Shared drive sync log - Women in Tech,1/9/2025,13
+28,28,Codebase snapshot - Robotics Club GitHub export,7/10/2024,10
+29,29,Incident report archive - Fall Semester 2023,11/12/2024,56
+30,30,Campus engagement survey results - Northeastern Insights,7/26/2024,95
+31,31,Academic advisor notes export - Advising Portal,1/14/2025,1
+32,32,Emergency contact database - Fall 2024,10/29/2024,93
+33,33,Student involvement transcript export - April 2024,7/20/2024,83
+34,34,Club equipment inventory list - Tech Lending Program,4/10/2024,31
+35,35,Student roster export - Spring 2024,5/27/2024,89
+36,36,Event feedback forms - Global Citizenship Week,2/19/2025,72
+37,37,Academic advisor notes export - Advising Portal,7/15/2024,15
+38,38,Financial aid award data backup - AY 2023-2024,11/14/2024,98
+39,39,Publications archive - Northeastern Literary Society,8/18/2024,83
+40,40,Campus engagement survey results - Northeastern Insights,10/13/2024,7
+41,41,Training module completion records - April 2024,9/15/2024,3
+42,42,Website HTML backup - International Student Network,4/1/2025,85
+43,43,Online poll results export - Club Officer Elections,4/4/2025,6
+44,44,Student involvement transcript export - April 2024,12/9/2024,22
+45,45,Flyer design files - Pride Week 2024,4/28/2024,71
+46,46,Codebase snapshot - Robotics Club GitHub export,4/30/2024,36
+47,47,Meeting minutes archive - Diversity & Inclusion Committee,10/1/2024,6
+48,48,Undergraduate research submissions - Spring Symposium,6/9/2024,33
+49,49,Canvas gradebook export - Data Science Society,3/14/2025,50
+50,50,Project submission archive - Startup Challenge 2024,7/18/2024,69
+51,51,Canvas gradebook export - Data Science Society,12/17/2024,80
+52,52,Emergency contact database - Fall 2024,8/19/2024,16
+53,53,Cloud storage metadata export - Northeastern OneDrive,3/3/2025,13
+54,54,Email distribution list - Green Engineering Club,2/26/2025,70
+55,55,Event registration logs - HackNU 2024,10/2/2024,31
+56,56,"Club membership database snapshot - March 15, 2024",9/23/2024,82
+57,57,Archived club charters - All registered orgs,1/30/2025,26
+58,58,Financial aid award data backup - AY 2023-2024,9/5/2024,49
+59,59,Flyer design files - Pride Week 2024,12/30/2024,40
+60,60,Volunteer hours log - Community Cleanup April 2024,6/7/2024,48
+61,61,Project submission archive - Startup Challenge 2024,1/13/2025,57
+62,62,Incident report archive - Fall Semester 2023,5/1/2024,49
+63,63,Room reservation logs - Curry Student Center,1/27/2025,24
+64,64,Weekly newsletter drafts - Sustainability Coalition,11/20/2024,70
+65,65,Campus engagement survey results - Northeastern Insights,8/29/2024,67
+66,66,Event registration logs - HackNU 2024,4/1/2025,34
+67,67,Archived budget spreadsheet - Fiscal Year 2023,10/19/2024,29
+68,68,Zoom chat logs - Guest Speaker Series,11/8/2024,85
+69,69,Campus engagement survey results - Northeastern Insights,10/10/2024,94
+70,70,Academic advisor notes export - Advising Portal,4/19/2024,96
+71,71,Student roster export - Spring 2024,7/18/2024,49
+72,72,Internship placement records - Co-op Office,3/5/2025,58
+73,73,Zoom chat logs - Guest Speaker Series,6/20/2024,20
+74,74,Annual report archive - Student Government Association,5/6/2024,86
+75,75,Volunteer hours log - Community Cleanup April 2024,9/20/2024,12
+76,76,Club constitution and amendments - Robotics Club,6/22/2024,23
+77,77,Meeting minutes archive - Diversity & Inclusion Committee,4/18/2024,30
+78,78,Internship placement records - Co-op Office,1/12/2025,64
+79,79,Zoom chat logs - Guest Speaker Series,6/25/2024,81
+80,80,Document repository backup - Black Student Union,10/15/2024,12
+81,81,Canvas gradebook export - Data Science Society,2/11/2025,34
+82,82,Event feedback forms - Global Citizenship Week,7/20/2024,53
+83,83,Undergraduate research submissions - Spring Symposium,10/2/2024,87
+84,84,Incident report archive - Fall Semester 2023,12/25/2024,40
+85,85,Internship placement records - Co-op Office,3/2/2025,62
+86,86,Career fair employer list - April 2024,10/7/2024,98
+87,87,Leadership onboarding document pack - Student Government,9/6/2024,36
+88,88,Campus engagement survey results - Northeastern Insights,2/19/2025,42
+89,89,"Club membership database snapshot - March 15, 2024",8/11/2024,58
+90,90,Facilities maintenance log export - April 2024,9/6/2024,24
+91,91,Event registration logs - HackNU 2024,4/28/2024,52
+92,92,Zoom chat logs - Guest Speaker Series,1/17/2025,55
+93,93,"Club membership database snapshot - March 15, 2024",8/17/2024,90
+94,94,Cloud storage metadata export - Northeastern OneDrive,5/19/2024,24
+95,95,Student involvement transcript export - April 2024,11/4/2024,97
+96,96,Survey responses export - Spring Fest feedback,3/15/2025,99
+97,97,Student roster export - Spring 2024,2/5/2025,42
+98,98,Training module completion records - April 2024,6/26/2024,10
+99,99,Club constitution and amendments - Robotics Club,11/29/2024,13
+100,100,Online poll results export - Club Officer Elections,11/13/2024,74

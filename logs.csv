@@ -1,0 +1,101 @@
+id,admin_id,content,date_created,admin_ID
+1,1,Cancelled RSVP via mobile app.,10/26/2024,61
+2,2,Downloaded file during peak hours.,11/16/2024,2
+3,3,Rejected application after password reset.,6/14/2024,94
+4,4,User login with admin privileges.,6/20/2024,52
+5,5,Uploaded document due to inactivity.,9/27/2024,8
+6,6,Sent announcement in member dashboard.,5/25/2024,50
+7,7,Flagged content by request.,3/8/2025,73
+8,8,Rejected application by request.,4/18/2024,40
+9,9,Edited comment due to inactivity.,9/23/2024,59
+10,10,Scheduled meeting in club records.,8/22/2024,23
+11,11,Rejected application by request.,5/4/2024,33
+12,12,Uploaded document by request.,3/22/2025,82
+13,13,Changed password with admin privileges.,11/9/2024,23
+14,14,Submitted feedback for Environmental Alliance.,5/31/2024,52
+15,15,Edited comment as scheduled.,11/6/2024,3
+16,16,Edited comment as scheduled.,4/11/2024,50
+17,17,Viewed event during peak hours.,6/13/2024,100
+18,18,Cancelled RSVP from profile page.,4/4/2025,23
+19,19,Changed password during peak hours.,2/9/2025,96
+20,20,Sent announcement with attachment.,7/29/2024,37
+21,21,Joined club for Environmental Alliance.,3/13/2025,23
+22,22,Changed password with attachment.,12/5/2024,39
+23,23,Joined club for Environmental Alliance.,1/16/2025,86
+24,24,Approved member request during peak hours.,12/15/2024,19
+25,25,Updated club profile by request.,6/9/2024,45
+26,26,Rejected application in club records.,4/30/2024,4
+27,27,Submitted feedback for Black Student Union.,5/5/2024,10
+28,28,Flagged content after session timeout.,10/7/2024,10
+29,29,Submitted feedback from profile page.,12/26/2024,48
+30,30,Sent announcement in member dashboard.,10/21/2024,47
+31,31,Uploaded document for Data Science Society.,4/1/2025,35
+32,32,Changed password due to inactivity.,3/29/2025,12
+33,33,Approved member request containing event info.,12/19/2024,30
+34,34,Deleted post as scheduled.,12/6/2024,68
+35,35,Approved member request via mobile app.,4/23/2024,73
+36,36,Joined club containing event info.,2/22/2025,95
+37,37,Changed password after session timeout.,3/28/2025,99
+38,38,Joined club containing event info.,7/11/2024,82
+39,39,Submitted feedback for Black Student Union.,4/16/2024,55
+40,40,User login by moderator.,4/5/2025,17
+41,41,Rejected application in club records.,10/22/2024,99
+42,42,Rejected application in club records.,1/17/2025,89
+43,43,Submitted feedback for Environmental Alliance.,6/20/2024,39
+44,44,User login during peak hours.,8/20/2024,32
+45,45,Deleted post via mobile app.,10/23/2024,51
+46,46,Uploaded document due to inactivity.,7/26/2024,57
+47,47,Approved member request with attachment.,7/27/2024,32
+48,48,Changed password after session timeout.,7/8/2024,86
+49,49,Flagged content via mobile app.,5/22/2024,91
+50,50,Cancelled RSVP via mobile app.,10/27/2024,35
+51,51,Approved member request during peak hours.,12/1/2024,69
+52,52,Deleted post during peak hours.,10/27/2024,93
+53,53,Edited comment for International Student Network.,11/30/2024,8
+54,54,Edited comment after password reset.,6/12/2024,76
+55,55,Created new event with admin privileges.,12/18/2024,60
+56,56,Flagged content for Environmental Alliance.,11/25/2024,24
+57,57,Joined club in club records.,4/11/2024,18
+58,58,User logout linked to calendar.,6/3/2024,77
+59,59,Changed password after session timeout.,12/7/2024,59
+60,60,Flagged content for Environmental Alliance.,7/13/2024,58
+61,61,Approved member request with attachment.,3/18/2025,34
+62,62,Flagged content for Environmental Alliance.,9/21/2024,30
+63,63,Rejected application in club records.,10/19/2024,64
+64,64,Deleted post with attachment.,11/6/2024,22
+65,65,Cancelled RSVP for International Student Network.,6/24/2024,79
+66,66,Updated club profile by request.,9/28/2024,30
+67,67,Updated club profile during peak hours.,2/22/2025,86
+68,68,Changed password with admin privileges.,5/13/2024,72
+69,69,Created new event via mobile app.,8/22/2024,89
+70,70,Scheduled meeting from profile page.,12/10/2024,92
+71,71,Uploaded document containing event info.,11/7/2024,99
+72,72,Flagged content via mobile app.,6/21/2024,38
+73,73,Rejected application by moderator.,7/29/2024,76
+74,74,Flagged content by request.,7/5/2024,11
+75,75,Viewed event containing event info.,9/20/2024,82
+76,76,Viewed event containing event info.,11/16/2024,3
+77,77,Sent announcement in member dashboard.,11/5/2024,33
+78,78,Deleted post from profile page.,1/13/2025,59
+79,79,Cancelled RSVP via mobile app.,9/11/2024,79
+80,80,Uploaded document due to inactivity.,10/20/2024,29
+81,81,Cancelled RSVP with attachment.,4/9/2024,24
+82,82,Flagged content after password reset.,9/1/2024,31
+83,83,Flagged content after session timeout.,3/6/2025,54
+84,84,Uploaded document by request.,10/10/2024,53
+85,85,Sent announcement with attachment.,2/23/2025,25
+86,86,Joined club containing event info.,2/19/2025,11
+87,87,Deleted post for International Student Network.,6/2/2024,85
+88,88,Joined club containing event info.,4/17/2024,55
+89,89,Rejected application after password reset.,3/1/2025,63
+90,90,Downloaded file during peak hours.,1/15/2025,1
+91,91,Flagged content for Environmental Alliance.,9/23/2024,29
+92,92,Joined club containing event info.,12/2/2024,39
+93,93,Deleted post via mobile app.,2/20/2025,18
+94,94,Changed password by request.,1/8/2025,84
+95,95,Changed password via web portal.,5/6/2024,73
+96,96,Changed password containing event info.,6/3/2024,5
+97,97,Submitted feedback in club records.,12/25/2024,31
+98,98,User login by moderator.,1/23/2025,69
+99,99,Approved member request containing event info.,7/23/2024,64
+100,100,User login as scheduled.,2/2/2025,3

@@ -1,0 +1,101 @@
+id,name,start_date,end_date,location_id,club_id,location_ID,club_ID
+1,Northeastern Model UN Conference,6/6/2023,1/9/2025,1,1,9,10
+2,Relay For Life,5/9/2023,8/20/2024,2,2,99,68
+3,Lunar New Year Celebration,11/10/2023,10/14/2024,3,3,89,83
+4,TechTogether Boston,6/4/2023,4/25/2024,4,4,96,34
+5,Relay For Life,7/18/2023,7/9/2024,5,5,42,19
+6,Husky Startup Challenge,4/4/2023,11/19/2024,6,6,97,62
+7,Spring Carnival,4/24/2023,9/13/2024,7,7,12,25
+8,Homecoming,1/22/2024,2/5/2025,8,8,65,98
+9,Ice Skating at Matthews Arena,3/5/2024,1/9/2025,9,9,85,17
+10,Undergraduate Research Symposium,12/11/2023,12/7/2024,10,10,29,85
+11,Mental Health Awareness Week,8/8/2023,10/26/2024,11,11,39,94
+12,International Education Week,11/26/2023,5/21/2024,12,12,11,69
+13,Career Fair,8/20/2023,9/26/2024,13,13,1,9
+14,Mental Health Awareness Week,12/3/2023,5/17/2024,14,14,16,21
+15,MLK Day of Service,11/20/2023,2/11/2025,15,15,49,80
+16,Fall Fest,10/9/2023,12/31/2024,16,16,20,32
+17,Husky Hunt,12/10/2023,2/2/2025,17,17,35,46
+18,Spring Carnival,11/27/2023,12/27/2024,18,18,76,40
+19,Mental Health Awareness Week,3/27/2024,4/9/2024,19,19,17,12
+20,Latinx Heritage Month,4/20/2023,3/26/2025,20,20,77,18
+21,Spring Carnival,6/17/2023,1/3/2025,21,21,72,13
+22,Husky Startup Challenge,7/1/2023,7/5/2024,22,22,23,4
+23,Winter Involvement Fair,2/19/2024,2/12/2025,23,23,82,73
+24,Asian American Heritage Month,4/7/2023,6/22/2024,24,24,31,43
+25,HackNU,2/26/2024,6/14/2024,25,25,8,96
+26,MLK Day of Service,2/19/2024,3/21/2025,26,26,3,61
+27,Sustainability Week,12/6/2023,12/4/2024,27,27,30,70
+28,Husky Hunt,4/30/2023,7/10/2024,28,28,13,86
+29,Northeastern Model UN Conference,6/16/2023,6/13/2024,29,29,94,54
+30,Open Mic Night,10/19/2023,10/20/2024,30,30,95,81
+31,Welcome Week,12/19/2023,2/11/2025,31,31,56,60
+32,HackNU,8/6/2023,1/4/2025,32,32,18,87
+33,Entrepreneurship Week,9/15/2023,9/16/2024,33,33,64,39
+34,Pride Fest,12/5/2023,6/22/2024,34,34,34,29
+35,Red and Black Gala,2/15/2024,6/27/2024,35,35,4,3
+36,Husky Hunt,11/21/2023,5/11/2024,36,36,59,71
+37,Spring Fest,1/12/2024,5/5/2024,37,37,92,20
+38,Husky Hunt,5/8/2023,10/6/2024,38,38,36,78
+39,Asian American Heritage Month,3/8/2024,6/28/2024,39,39,33,84
+40,Open Mic Night,9/22/2023,8/7/2024,40,40,100,8
+41,Midnight Breakfast,5/30/2023,11/1/2024,41,41,24,82
+42,Northeastern Model UN Conference,12/18/2023,11/15/2024,42,42,68,53
+43,Black History Month Celebration,12/1/2023,8/19/2024,43,43,28,97
+44,Red and Black Gala,11/13/2023,7/2/2024,44,44,93,79
+45,Black History Month Celebration,11/27/2023,7/7/2024,45,45,86,59
+46,Husky Hunt,1/17/2024,12/3/2024,46,46,73,35
+47,Black History Month Celebration,11/22/2023,3/18/2025,47,47,98,91
+48,Asian American Heritage Month,8/15/2023,6/27/2024,48,48,57,92
+49,Homecoming,11/4/2023,9/19/2024,49,49,91,28
+50,International Student Mixer,5/29/2023,1/19/2025,50,50,67,52
+51,Homecoming,9/16/2023,8/10/2024,51,51,79,67
+52,Relay For Life,3/7/2024,1/15/2025,52,52,78,2
+53,Career Fair,12/19/2023,5/18/2024,53,53,19,47
+54,Spring Carnival,10/9/2023,11/9/2024,54,54,51,37
+55,International Student Mixer,7/31/2023,11/28/2024,55,55,5,22
+56,Asian American Heritage Month,4/1/2023,5/28/2024,56,56,88,76
+57,Mental Health Awareness Week,3/27/2024,11/24/2024,57,57,60,88
+58,Black History Month Celebration,6/1/2023,1/13/2025,58,58,25,89
+59,International Student Mixer,11/14/2023,10/9/2024,59,59,32,24
+60,Red and Black Gala,2/9/2024,2/15/2025,60,60,54,44
+61,Red and Black Gala,4/11/2023,2/27/2025,61,61,15,11
+62,Pride Fest,1/28/2024,4/11/2024,62,62,83,99
+63,Spring Fest,10/21/2023,3/30/2025,63,63,38,36
+64,Global Citizenship Week,9/18/2023,6/27/2024,64,64,66,26
+65,Winter Involvement Fair,4/20/2023,5/12/2024,65,65,87,7
+66,MLK Day of Service,11/30/2023,12/20/2024,66,66,2,57
+67,Red and Black Gala,4/13/2023,3/18/2025,67,67,63,74
+68,International Student Mixer,4/9/2023,4/4/2024,68,68,58,55
+69,Husky Startup Challenge,11/2/2023,1/18/2025,69,69,48,45
+70,HackNU,7/19/2023,12/16/2024,70,70,45,41
+71,Research and Innovation Expo,8/13/2023,5/20/2024,71,71,75,51
+72,Women’s History Month Events,1/27/2024,6/2/2024,72,72,7,56
+73,Ice Skating at Matthews Arena,2/18/2024,2/5/2025,73,73,90,15
+74,Sustainability Week,9/14/2023,9/8/2024,74,74,81,95
+75,Relay For Life,4/6/2023,3/14/2025,75,75,22,23
+76,Relay For Life,9/2/2023,10/12/2024,76,76,84,93
+77,MLK Day of Service,2/5/2024,6/19/2024,77,77,55,65
+78,Dance Showcase,8/23/2023,8/13/2024,78,78,74,38
+79,MLK Day of Service,8/24/2023,12/4/2024,79,79,47,63
+80,Student Leadership Awards,10/9/2023,8/15/2024,80,80,61,30
+81,Global Citizenship Week,8/16/2023,4/16/2024,81,81,71,27
+82,Relay For Life,4/29/2023,12/30/2024,82,82,46,77
+83,Spring Carnival,9/3/2023,8/28/2024,83,83,21,33
+84,Spring Carnival,12/30/2023,4/17/2024,84,84,10,90
+85,International Student Mixer,4/1/2023,12/31/2024,85,85,26,58
+86,Relay For Life,10/10/2023,10/23/2024,86,86,27,100
+87,Student Leadership Awards,2/1/2024,5/24/2024,87,87,69,72
+88,HackNU,9/5/2023,3/19/2025,88,88,37,16
+89,Latinx Heritage Month,9/24/2023,6/26/2024,89,89,43,50
+90,Welcome Week,6/6/2023,11/3/2024,90,90,44,48
+91,Ice Skating at Matthews Arena,9/30/2023,6/16/2024,91,91,50,5
+92,Husky Startup Challenge,8/5/2023,9/21/2024,92,92,52,14
+93,Global Citizenship Week,1/14/2024,5/7/2024,93,93,6,64
+94,NUGive Day,5/16/2023,3/24/2025,94,94,41,75
+95,MLK Day of Service,12/23/2023,4/3/2024,95,95,14,6
+96,Spring Fest,12/29/2023,12/8/2024,96,96,80,31
+97,Spring Fest,2/21/2024,1/27/2025,97,97,70,49
+98,Study Abroad Fair,5/17/2023,12/21/2024,98,98,53,66
+99,Latinx Heritage Month,7/26/2023,10/9/2024,99,99,40,14
+100,Career Fair,6/29/2023,1/11/2025,100,100,62,24

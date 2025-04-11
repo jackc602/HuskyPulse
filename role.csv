@@ -1,0 +1,101 @@
+id,admin_id,role_name,admin_ID
+1,1,student,36
+2,2,system administrator,86
+3,3,student,96
+4,4,other,10
+5,5,other,37
+6,6,faculty,5
+7,7,staff,75
+8,8,system administrator,93
+9,9,staff,63
+10,10,faculty,32
+11,11,faculty,72
+12,12,student,95
+13,13,faculty,71
+14,14,other,47
+15,15,staff,65
+16,16,other,45
+17,17,system administrator,81
+18,18,staff,50
+19,19,student,51
+20,20,other,2
+21,21,system administrator,98
+22,22,system administrator,56
+23,23,staff,38
+24,24,system administrator,9
+25,25,faculty,14
+26,26,faculty,78
+27,27,other,46
+28,28,student,6
+29,29,staff,30
+30,30,other,44
+31,31,staff,66
+32,32,faculty,76
+33,33,system administrator,94
+34,34,staff,25
+35,35,staff,83
+36,36,other,53
+37,37,student,33
+38,38,staff,28
+39,39,staff,19
+40,40,staff,60
+41,41,other,42
+42,42,faculty,21
+43,43,staff,40
+44,44,staff,48
+45,45,system administrator,29
+46,46,staff,99
+47,47,staff,59
+48,48,staff,91
+49,49,faculty,7
+50,50,staff,18
+51,51,student,84
+52,52,system administrator,87
+53,53,faculty,61
+54,54,student,57
+55,55,system administrator,97
+56,56,staff,15
+57,57,student,4
+58,58,faculty,3
+59,59,system administrator,85
+60,60,staff,12
+61,61,student,41
+62,62,faculty,62
+63,63,other,90
+64,64,staff,58
+65,65,student,67
+66,66,other,24
+67,67,other,55
+68,68,staff,88
+69,69,staff,73
+70,70,faculty,82
+71,71,system administrator,34
+72,72,student,39
+73,73,faculty,49
+74,74,other,23
+75,75,system administrator,80
+76,76,system administrator,92
+77,77,student,26
+78,78,other,74
+79,79,student,13
+80,80,faculty,100
+81,81,student,89
+82,82,system administrator,35
+83,83,staff,31
+84,84,staff,20
+85,85,system administrator,68
+86,86,faculty,27
+87,87,staff,52
+88,88,other,79
+89,89,other,54
+90,90,faculty,43
+91,91,staff,69
+92,92,staff,70
+93,93,system administrator,64
+94,94,system administrator,8
+95,95,staff,16
+96,96,other,77
+97,97,system administrator,22
+98,98,faculty,11
+99,99,student,17
+100,100,staff,46
