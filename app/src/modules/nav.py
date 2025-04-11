@@ -55,11 +55,37 @@ def AdminPageNav():
         "pages/21_ML_Model_Mgmt.py", label="ML Model Management", icon="🏢"
     )
 
+# Club leader role
 def ClubHome():
     st.sidebar.page_link("pages/page01_club_home.py", label="Home")
 
 def ViewPostClub():
     st.sidebar.page_link("pages/page03_view_post_club.py", label="Posts")
+
+# Student role
+def StudentHome():
+    st.sidebar.page_link("pages/page10_student_home.py", label="Home")
+
+def ViewPostStudent():
+    st.sidebar.page_link("pages/page11_view_post_student.py", label="Posts")
+
+def ApplicationStudent():
+    st.sidebar.page_link("pages/page12_application_student.py", label="Applications")
+
+# Analyst role
+def AnalystHome():
+    st.sidebar.page_link("pages/page30_analyst_home.py", label="Home")
+
+def BookingData():
+    st.sidebar.page_link("pages/page31_booking_data.py", label="Booking Data")
+
+# Admin role
+def AdminHome():
+    st.sidebar.page_link("pages/page20_admin_home.py", label="Home")
+
+def AdminCommunication():
+    st.sidebar.page_link("pages/page21_admin_communication.py", label="Communication")
+
 
 # --------------------------------Links Function -----------------------------------------------
 def SideBarLinks(show_home=False):
@@ -82,26 +108,26 @@ def SideBarLinks(show_home=False):
     # Show the other page navigators depending on the users' role.
     if st.session_state["authenticated"]:
 
+        # Club leader sidebar
         if st.session_state["role"] == "club_leader":
             ClubHome()
             ViewPostClub()
 
         
-        # Show World Bank Link and Map Demo Link if the user is a political strategy advisor role.
-        if st.session_state["role"] == "pol_strat_advisor":
-            PolStratAdvHomeNav()
-            WorldBankVizNav()
-            MapDemoNav()
-
-        # If the user role is usaid worker, show the Api Testing page
-        if st.session_state["role"] == "usaid_worker":
-            PredictionNav()
-            ApiTestNav()
-            ClassificationNav()
+        # student sidebar
+        if st.session_state["role"] == "student":
+            StudentHome()
+            ViewPostStudent()
+            ApplicationStudent()
 
         # If the user is an administrator, give them access to the administrator pages
         if st.session_state["role"] == "administrator":
-            AdminPageNav()
+            AdminHome()
+            AdminCommunication()
+
+        if st.session_state["role"] == "analyst":
+            AnalystHome()
+            BookingData()
 
     # Always show the About page at the bottom of the list of links
     AboutPageNav()

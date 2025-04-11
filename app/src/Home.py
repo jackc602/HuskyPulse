@@ -57,21 +57,27 @@ if st.button("Act as Zoe, leader of the Hawaii Club",
     logger.info("Logging in as Club Leader Persona")
     st.switch_page('pages/page01_club_home.py')
 
-if st.button('Act as Mohammad, an USAID worker', 
+if st.button('Act as Charlie, a Northeastern Student', 
             type = 'primary', 
             use_container_width=True):
-    st.session_state['authenticated'] = True
-    st.session_state['role'] = 'usaid_worker'
-    st.session_state['first_name'] = 'Mohammad'
-    st.switch_page('pages/10_USAID_Worker_Home.py')
+	st.session_state['authenticated'] = True
+	st.session_state['role'] = 'student'
+	st.session_state['first_name'] = 'Charlie'
+	st.switch_page('pages/page10_student_home.py')
 
 if st.button('Act as System Administrator', 
             type = 'primary', 
             use_container_width=True):
-    st.session_state['authenticated'] = True
-    st.session_state['role'] = 'administrator'
-    st.session_state['first_name'] = 'SysAdmin'
-    st.switch_page('pages/20_Admin_Home.py')
+	st.session_state['authenticated'] = True
+	st.session_state['role'] = 'administrator'
+	st.session_state['first_name'] = 'SysAdmin'
+	st.switch_page('pages/page20_admin_home.py')
 
-
+if st.button('Act as System Analyst', 
+            type = 'primary', 
+            use_container_width=True):
+	st.session_state['authenticated'] = True
+	st.session_state['role'] = 'analyst'
+	st.session_state['first_name'] = 'Daniel'
+	st.switch_page('pages/page20_admin_home.py')
 
