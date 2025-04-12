@@ -8,7 +8,7 @@ create table if not exists student(
     first_name varchar(50) not null,
     last_name varchar(50) not null,
     email varchar(50) not null,
-    # changed from 50 60 100
+    # changed from 50 to 100
     major varchar(100) not null,
     cultural_background varchar(50),
     religion varchar(50),
