@@ -8,7 +8,8 @@ create table if not exists student(
     first_name varchar(50) not null,
     last_name varchar(50) not null,
     email varchar(50) not null,
-    major varchar(50) not null,
+    # changed from 50 60 100
+    major varchar(100) not null,
     cultural_background varchar(50),
     religion varchar(50),
     pre_professional varchar(50),
@@ -41,7 +42,8 @@ create table if not exists student_club(
 create table if not exists location(
     id int primary key not null,
     capacity int not null,
-    building varchar(50) not null,
+    # changed building from 50 to 100
+    building varchar(100) not null,
     room_num int,
     address varchar(100) not null,
     city varchar(100) not null,
@@ -164,3 +166,5 @@ CREATE TABLE IF NOT EXISTS compliance(
     CONSTRAINT FOREIGN KEY (club_id) REFERENCES club(id)
         ON UPDATE CASCADE
 );
+
+SHOW DATABASES;
