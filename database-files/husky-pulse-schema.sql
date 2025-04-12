@@ -118,7 +118,8 @@ CREATE TABLE IF NOT EXISTS feedback(
     recipient_id INT NOT NULL,
     recipient_type VARCHAR(20) NOT NULL,
     sender_id INT NOT NULL,
-    sender_type VARCHAR(20) NOT NULL,
+    # increased varchar to 200 in case
+    sender_type VARCHAR(200) NOT NULL,
     content TEXT NOT NULL,
     date_submitted DATETIME NOT NULL,
     INDEX idx_recipient (recipient_id, recipient_type),
