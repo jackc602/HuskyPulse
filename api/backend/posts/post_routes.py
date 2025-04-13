@@ -9,7 +9,7 @@ posts = Blueprint("posts", __name__)
 
 # retrieve all posts that should be visible to a given student
 # REQUIRES PARAMS WHEN REQUEST IS MADE ON FRONTEND
-@posts.route("/posts", methods = ["GET"])
+@posts.route("/posts/student", methods = ["GET"])
 def fetch_posts():
     student_NUID = request.args.get("nuid")
     query = """
@@ -26,9 +26,22 @@ def fetch_posts():
     response.status_code = 200
     return response
 
-# # Fetch all posts made by a certain club
-# @posts.route("/posts", methods = ["GET"])
-# def fetch_club_posts():
+# Fetch all posts made by a certain club
+@posts.route("/posts/club", methods = ["GET"])
+def fetch_club_posts():
+    club_id = request.args.get("club_id")
+    query = """
+    SELECT *
+    FROM post p
+    WHERE p.club_id = %s
+    """
+    params = (club_id)
+    cursor = db.get_db().cursor()
+    cursor.execute(query, params)
+    data = cursor.fetchall()
+    response = make_response(jsonify(data))
+    response.status_code = 200
+    return response
 
 # create a new post in the database
 @posts.route("/posts", methods = ["POST"])

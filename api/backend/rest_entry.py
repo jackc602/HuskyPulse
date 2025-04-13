@@ -6,9 +6,9 @@ from backend.products.products_routes import products
 from backend.simple.simple_routes import simple_routes
 from backend.posts.post_routes import posts
 # importing club from club.py
-from backend.club.club import club
+from backend.club.club_routes import club
 # import feedback from feedback.py
-from backend.feedback.feedback import feedback
+from backend.feedback.feedback_routes import feedback
 
 import os
 from dotenv import load_dotenv
@@ -50,9 +50,9 @@ def create_app():
     # app.register_blueprint(products,    url_prefix='/p')
     app.register_blueprint(posts, url_prefix = "/p")
     # registering club
-    app.register_blueprint(club, url_prefix='/club')
+    app.register_blueprint(club, url_prefix='/c')
     # registering feedback
-    app.register_blueprint(feedback, url_prefix='/feedback')
+    app.register_blueprint(feedback, url_prefix='/f')
 
 
     # Don't forget to return the app object
