@@ -11,6 +11,8 @@ from backend.club.club_routes import club
 from backend.feedback.feedback_routes import feedback
 #importing the application route to get applications for clubs/events
 from backend.application.application_routes import application_routes
+# importing the commments routes for comments under a user
+from backend.comment.comment_routes import comments
 
 
 
@@ -59,6 +61,8 @@ def create_app():
     app.register_blueprint(feedback, url_prefix='/feedback')
     # registering the application blueprint
     app.register_blueprint(application_routes)
+    # registering the comment blueprint
+    app.register_blueprint(comments, url_prefix='/comments')
 
 
     # Don't forget to return the app object

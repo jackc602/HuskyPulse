@@ -38,30 +38,54 @@ with st.form("feedback_form"):
 
 st.title("My Club/Event Applications")
 
-# -------------------- Applicant ID Input --------------------
+# -------------------- Student Applications --------------------
+st.subheader("My Club/Event Applications")
+
 applicant_id = st.text_input("Enter your Applicant ID to see your applications", placeholder="e.g. 83")
 
 if applicant_id:
     try:
-        # making sure the applicant id is a numeric value only(converting it to int)
-        int_id = int(applicant_id) 
+        int_id = int(applicant_id)
         url = f"http://api:4000/applications?applicant_id={int_id}"
         response = requests.get(url)
 
         if response.status_code == 200:
             applications = response.json()
             if applications:
+                st.write("### Your Applications")
                 for app in applications:
                     st.markdown(f"""
-                    🔖 **Club ID**: `{app['club_id']}`  
-                    🔍 **Status**: `{app['status'].capitalize()}`
+                     **Application ID**: `{app['id']}`  
+                     **Club ID**: `{app['club_id']}`  
+                     *Status**: `{app['status'].capitalize()}`
                     ---
                     """)
             else:
                 st.info("No applications found for this Applicant ID.")
         else:
-            st.error("Error fetching data from the server.")
-
+            st.error("Error fetching applications.")
     except ValueError:
         st.error("Applicant ID must be a number.")
+
+
+
+# -------------------- For commments --------------------
+st.subheader("Check Out Comments on a Club")
+
+club_id_for_comments = st.text_input("Enter Club ID to see comments for the club or event:")
+
+if club_id_for_comments:
+    try:
+        response = requests.get(f"http://api:4000/comments?club_id={int(club_id_for_comments)}")
+        if response.status_code == 200:
+            comments_data = response.json()
+            if comments_data:
+                for c in comments_data:
+                    st.markdown(f"- 🗨️ {c['text']} *(Posted on {c['date']})*")
+            else:
+                st.info("No comments found for this club.")
+        else:
+            st.error("Failed to fetch comments.")
+    except ValueError:
+        st.error("Club ID must be a number.")
 
