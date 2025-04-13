@@ -3,10 +3,10 @@ from datetime import datetime
 from backend.db_connection import db
 
 # making the blueprint for club
-club = Blueprint('clubs', __name__)  
+club = Blueprint('club', __name__)  
 
 # ---------------- Get all clubs ----------------
-@tables.route('/clubs', methods=['GET'])
+@club.route('/clubs', methods=['GET'])
 def get_all_clubs():
     query = '''
         SELECT id, name, type, subject, size
