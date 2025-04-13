@@ -11,7 +11,7 @@ from backend.club.club_routes import club
 from backend.feedback.feedback_routes import feedback
 #importing the application route to get applications for clubs/events
 from backend.application.application_routes import application_routes
-# importing the commments routes for comments under a user
+# importing the comments routes for comments under a user
 from backend.comment.comment_routes import comments
 # importing the recommendations routefor recommendations for clubs
 from backend.recommendations.recommendation_routes import recommendations
@@ -20,10 +20,10 @@ from backend.recommendations.recommendation_routes import recommendations
 
 import os
 from dotenv import load_dotenv
-
+from backend.simple.zoe_routes import bp as zoe_bp
 def create_app():
     app = Flask(__name__)
-
+    app.register_blueprint(zoe_bp)
     # Load environment variables
     # This function reads all the values from inside
     # the .env file (in the parent folder) so they
