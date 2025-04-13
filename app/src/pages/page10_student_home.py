@@ -72,20 +72,12 @@ if applicant_id:
 # -------------------- For commments --------------------
 st.subheader("Check Out Comments on a Club")
 
-club_id_for_comments = st.text_input("Enter Club ID to see comments for the club or event:")
+nuid = st.text_input("Please enter your NUID to view your comments:")
 
-if club_id_for_comments:
-    try:
-        response = requests.get(f"http://api:4000/comments?club_id={int(club_id_for_comments)}")
-        if response.status_code == 200:
-            comments_data = response.json()
-            if comments_data:
-                for c in comments_data:
-                    st.markdown(f"- 🗨️ {c['text']} *(Posted on {c['date']})*")
-            else:
-                st.info("No comments found for this club.")
-        else:
-            st.error("Failed to fetch comments.")
-    except ValueError:
-        st.error("Club ID must be a number.")
+if nuid:
+    response = requests.get(f"http://api:4000/comments?nuid={nuid}")
+    if response.status_code == 200:
+        comments = response.json()
+        for c in comments:
+            st.markdown(f"- 🗨️ {c['text']} *(Posted on {c['date']})*")
 
