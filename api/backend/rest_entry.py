@@ -9,6 +9,10 @@ from backend.posts.post_routes import posts
 from backend.club.club_routes import club
 # import feedback from feedback.py
 from backend.feedback.feedback_routes import feedback
+#importing the application route to get applications for clubs/events
+from backend.application.application_routes import application_routes
+
+
 
 import os
 from dotenv import load_dotenv
@@ -52,7 +56,9 @@ def create_app():
     # registering club
     app.register_blueprint(club, url_prefix='/c')
     # registering feedback
-    app.register_blueprint(feedback, url_prefix='/f')
+    app.register_blueprint(feedback, url_prefix='/feedback')
+    # registering the application blueprint
+    app.register_blueprint(application_routes)
 
 
     # Don't forget to return the app object

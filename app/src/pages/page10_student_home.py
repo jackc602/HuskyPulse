@@ -9,7 +9,7 @@ st.title(f"Welcome {st.session_state.first_name}!")
 
 # ----------------- Show all clubs in a dropdown -----------------
 st.subheader("Available Clubs")
-response = requests.get("http://web-api:4000/club/clubs")
+response = requests.get("http://api:4000/club/clubs")
 if response.status_code == 200:
     clubs = response.json()
     
@@ -35,4 +35,33 @@ with st.form("feedback_form"):
             "content": content
         }
 
+
+st.title("My Club/Event Applications")
+
+# -------------------- Applicant ID Input --------------------
+applicant_id = st.text_input("Enter your Applicant ID to see your applications", placeholder="e.g. 83")
+
+if applicant_id:
+    try:
+        # making sure the applicant id is a numeric value only(converting it to int)
+        int_id = int(applicant_id) 
+        url = f"http://api:4000/applications?applicant_id={int_id}"
+        response = requests.get(url)
+
+        if response.status_code == 200:
+            applications = response.json()
+            if applications:
+                for app in applications:
+                    st.markdown(f"""
+                    🔖 **Club ID**: `{app['club_id']}`  
+                    🔍 **Status**: `{app['status'].capitalize()}`
+                    ---
+                    """)
+            else:
+                st.info("No applications found for this Applicant ID.")
+        else:
+            st.error("Error fetching data from the server.")
+
+    except ValueError:
+        st.error("Applicant ID must be a number.")
 

@@ -1184,6 +1184,7 @@ INSERT INTO `application` (`id`, `status`, `club_id`, `applicant_id`) VALUES ("9
 INSERT INTO `application` (`id`, `status`, `club_id`, `applicant_id`) VALUES ("99", "accepted", "24", "98");
 INSERT INTO `application` (`id`, `status`, `club_id`, `applicant_id`) VALUES ("100", "rejected", "27", "84");
 
+
 # from backup
 INSERT INTO backup (id, admin_id, content, date_created) VALUES (1, 1, 'Facilities maintenance log export - April 2024', '2024-07-23 00:00:00');
 INSERT INTO backup (id, admin_id, content, date_created) VALUES (2, 2, 'Presentation slide deck archive - Student-Led Talks', '2024-12-22 00:00:00');
