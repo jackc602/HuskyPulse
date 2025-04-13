@@ -53,3 +53,4 @@ def get_all_feedback():
     cursor.execute(query)
     data = cursor.fetchall()
     return make_response(jsonify(data), 200)
+
