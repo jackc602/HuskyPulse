@@ -5,7 +5,7 @@ ALTER TABLE student MODIFY `year` INT;
 
 
 # for student table
-INSERT INTO `student` (`NUID`, `first_name`, `last_name`, `email`, `major`, `cultural_background`, `religion`, `pre_professional`, `year`) VALUES (1, 'Vaughan', 'Corrao', 'vcorrao0@squidoo.com', 'Undeclared', 'Salish', 'Candomblé', 'Pre-Engineering', 1999);
+INSERT INTO `student` (`NUID`, `first_name`, `last_name`, `email`, `major`, `cultural_background`, `religion`, `pre_professional`, `year`) VALUES (1, 'Charlie', 'Johnson', 'cjohnson@squidoo.com', 'Undeclared', 'Salish', 'Candomblé', 'Pre-Engineering', 1999);
 INSERT INTO `student` (`NUID`, `first_name`, `last_name`, `email`, `major`, `cultural_background`, `religion`, `pre_professional`, `year`) VALUES (2, 'Khalil', 'Gingell', 'kgingell1@google.nl', 'Business Administration', 'Lakota', 'Aboriginal Spirituality', 'Pre-Military', 2005);
 INSERT INTO `student` (`NUID`, `first_name`, `last_name`, `email`, `major`, `cultural_background`, `religion`, `pre_professional`, `year`) VALUES (3, 'Koral', 'Antat', 'kantat2@hc360.com', 'Media Arts', 'Gitxsan', 'New Age', 'Pre-Veterinary', 1992);
 INSERT INTO `student` (`NUID`, `first_name`, `last_name`, `email`, `major`, `cultural_background`, `religion`, `pre_professional`, `year`) VALUES (4, 'Erhard', 'Follos', 'efollos3@vinaora.com', 'Game Design', 'Inuvialuit', 'Tengriism', 'Pre-Physical Therapy', 2007);
@@ -109,7 +109,7 @@ INSERT INTO `student` (`NUID`, `first_name`, `last_name`, `email`, `major`, `cul
 
 
 # for club table
-INSERT INTO `club` (`id`, `name`, `type`, `subject`, `size`) VALUES (1, "Debate Club", "STEM", "Indigenous Culture", 41);
+INSERT INTO `club` (`id`, `name`, `type`, `subject`, `size`) VALUES (1, "Hawaii Club", "Cultural", "Cultural Exchange", 41);
 INSERT INTO `club` (`id`, `name`, `type`, `subject`, `size`) VALUES (2, "Film Society", "Professional", "Computer Science", 10);
 INSERT INTO `club` (`id`, `name`, `type`, `subject`, `size`) VALUES (3, "Public Health Initiative", "Environmental", "Media Production", 157);
 INSERT INTO `club` (`id`, `name`, `type`, `subject`, `size`) VALUES (4, "Muslim Student Association", "Professional", "Running", 102);

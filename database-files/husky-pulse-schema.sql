@@ -79,7 +79,7 @@ create table if not exists student_event(
 create table if not exists post(
     id int primary key not null,
     is_public tinyint(1) not null,
-    created_at datetime not null,
+    created_at datetime not null DEFAULT CURRENT_TIMESTAMP,
     club_id int not null,
     event_id int,
     title varchar(50) not null,
