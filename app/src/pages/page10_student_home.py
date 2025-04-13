@@ -28,8 +28,8 @@ with st.form("feedback_form"):
 
     if submitted and content.strip():
         feedback_data = {
-            "recipient_id": 0,  # or 1 if needed — since it's HuskyPulse, pick a consistent ID
-            "recipient_type": "system",  # or "admin", whatever your backend expects
+            "recipient_id": 0,  
+            "recipient_type": "system",  
             "sender_id": st.session_state.get("nuid", 1),
             "sender_type": "student",
             "content": content
@@ -67,8 +67,6 @@ if applicant_id:
     except ValueError:
         st.error("Applicant ID must be a number.")
 
-
-
 # -------------------- For commments --------------------
 st.subheader("Check Out Comments on a Club")
 
@@ -80,4 +78,28 @@ if nuid:
         comments = response.json()
         for c in comments:
             st.markdown(f"- 🗨️ {c['text']} *(Posted on {c['date']})*")
+
+
+# -------------------- Personalized Club Recommendations --------------------
+st.subheader("🎯 Recommended Clubs Based on Your Interests")
+
+# Use the currently logged-in user's NUID
+applicant_id = st.session_state.get("nuid")
+
+if applicant_id:
+    try:
+        response = requests.get(f"http://api:4000/recommend/recommendations?applicant_id={applicant_id}")
+        if response.status_code == 200:
+            recommendations = response.json()
+            if recommendations:
+                for rec in recommendations:
+                    st.markdown(f"🎯 **{rec['name']}** - {rec['type']} | {rec['subject']}")
+            else:
+                st.info("No relevant clubs or events found at this time.")
+        else:
+            st.error("Could not fetch recommendations.")
+    except Exception as e:
+        st.error(f"Error fetching recommendations: {e}")
+else:
+    st.warning("You must be logged in to see recommendations.")
 

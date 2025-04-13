@@ -7,12 +7,14 @@ from backend.simple.simple_routes import simple_routes
 from backend.posts.post_routes import posts
 # importing club from club.py
 from backend.club.club_routes import club
-# import feedback from feedback.py
+# import feedback route from feedback.py to give feedback to HuskyPulse
 from backend.feedback.feedback_routes import feedback
 #importing the application route to get applications for clubs/events
 from backend.application.application_routes import application_routes
 # importing the commments routes for comments under a user
 from backend.comment.comment_routes import comments
+# importing the recommendations routefor recommendations for clubs
+from backend.recommendations.recommendation_routes import recommendations
 
 
 
@@ -63,7 +65,8 @@ def create_app():
     app.register_blueprint(application_routes)
     # registering the comment blueprint
     app.register_blueprint(comments, url_prefix='/comments')
-
+    # registering the recommendations blueprint
+    app.register_blueprint(recommendations, url_prefix='/recommend')
 
     # Don't forget to return the app object
     return app
