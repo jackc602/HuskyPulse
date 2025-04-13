@@ -8,7 +8,7 @@ st.write("# About this App")
 
 st.markdown (
     """
-    Hello! Welcome to the HuskyPulse!! We know how much clubs and events are valued at Northeastern,
+    Hello! Welcome to HuskyPulse!! We know how much clubs and events are valued at Northeastern,
     so we thought it would be a great idea to give you all things related to that right 
     here on HuskyPulse!
 
