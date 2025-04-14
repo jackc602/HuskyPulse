@@ -58,7 +58,7 @@ def create_app():
     # app.register_blueprint(products,    url_prefix='/p')
     app.register_blueprint(posts, url_prefix = "/p")
     # registering club
-    app.register_blueprint(club, url_prefix='/c')
+    app.register_blueprint(club, url_prefix='/club')
     # registering feedback
     app.register_blueprint(feedback, url_prefix='/feedback')
     # registering the application blueprint
