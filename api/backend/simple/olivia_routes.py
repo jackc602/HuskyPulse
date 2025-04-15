@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from backend.db_connection import get_db_connection
+from backend.db_connection import db
 
 
 
@@ -14,7 +14,7 @@ def assign_role():
         admin_id = data.get("admin_id")
         role_name = data.get("role_name")
 
-        conn = get_db_connection()
+        conn = db.get_db()
         cur = conn.cursor()
         cur.execute("""
             INSERT INTO role (admin_id, role_name)
@@ -37,7 +37,7 @@ def log_compliance():
     admin_id = data.get("admin_id")
     club_id = data.get("club_id")
 
-    conn = get_db_connection()
+    conn = db.get_db()
     cur = conn.cursor()
     cur.execute("""
         INSERT INTO compliance (status, admin_id, club_id)
@@ -56,7 +56,7 @@ def log_action():
     admin_id = data.get("admin_id")
     content = data.get("content")
 
-    conn = get_db_connection()
+    conn = db.get_db()
     cur = conn.cursor()
     cur.execute("""
         INSERT INTO logs (admin_id, content)

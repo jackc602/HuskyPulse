@@ -58,3 +58,7 @@ def create_post():
     response = make_response("Successfully created new post")
     response.status_code = 200
     return response
+
+# # update a post that has already been made 
+# @posts.route("/update", methods = ["POST"])
+# def update_post():

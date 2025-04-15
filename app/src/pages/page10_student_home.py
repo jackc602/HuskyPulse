@@ -8,7 +8,7 @@ from modules.config import get_api_base_url
 
 API_BASE_URL = get_api_base_url()
 
-response = requests.get(f"{API_BASE_URL}/c/clubs")
+# response = requests.get(f"{API_BASE_URL}/c/clubs")
 
 
 
