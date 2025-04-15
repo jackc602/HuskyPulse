@@ -1,7 +1,16 @@
 import streamlit as st
 from modules.nav import SideBarLinks
 import requests
+import os
 from datetime import datetime
+
+from modules.config import get_api_base_url
+
+API_BASE_URL = get_api_base_url()
+
+response = requests.get(f"{API_BASE_URL}/c/clubs")
+
+
 
 SideBarLinks()
 
@@ -9,7 +18,7 @@ st.title(f"Welcome {st.session_state.first_name}!")
 
 # ----------------- Show all clubs in a dropdown -----------------
 st.subheader("Available Clubs")
-response = requests.get("http://api:4000/club/clubs")
+response = requests.get(f"{API_BASE_URL}/c/clubs")
 if response.status_code == 200:
     clubs = response.json()
     

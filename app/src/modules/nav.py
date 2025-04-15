@@ -1,7 +1,7 @@
 # Idea borrowed from https://github.com/fsmosca/sample-streamlit-authenticator
 
 # This file has function to add certain functionality to the left side bar of the app
-
+import os
 import streamlit as st
 
 
@@ -72,6 +72,16 @@ def ViewPostStudent():
 def ApplicationStudent():
     st.sidebar.page_link("pages/page12_application_student.py", label="Applications")
 
+# Student role
+def StudentHome():
+    st.sidebar.page_link("pages/41_Charlie_Home.py", label="Home")
+
+def ViewPostStudent():
+    st.sidebar.page_link("pages/page11_view_post_student.py", label="Posts")
+
+def ApplicationStudent():
+    st.sidebar.page_link("pages/page12_application_student.py", label="Applications")
+
 # Analyst role
 def AnalystHome():
     st.sidebar.page_link("pages/page30_analyst_home.py", label="Home")
@@ -92,9 +102,12 @@ def SideBarLinks(show_home=False):
     """
     This function handles adding links to the sidebar of the app based upon the logged-in user's role, which was put in the streamlit session_state object when logging in.
     """
-
+    base_path = os.path.dirname(__file__)
+    logo_path = os.path.join(base_path, "../assets/logo.png")
     # add a logo to the sidebar always
-    st.sidebar.image("assets/logo.png", width=150)
+    st.sidebar.image(logo_path, width=150)
+
+
 
     # If there is no logged in user, redirect to the Home (Landing) page
     if "authenticated" not in st.session_state:

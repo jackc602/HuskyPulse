@@ -58,8 +58,8 @@ if st.button("Act as Zoe, leader of the Hawaii Club",
     logger.info("Logging in as Club Leader Persona")
     st.switch_page('pages/page01_club_home.py')
 
-if st.button('Act as Charlie, a Northeastern Student', 
-            type = 'primary', 
+if st.button('Act as Charlie, a Northeastern Student',
+            type = 'primary',
             use_container_width=True):
 	st.session_state['authenticated'] = True
 	st.session_state['role'] = 'student'
@@ -67,15 +67,14 @@ if st.button('Act as Charlie, a Northeastern Student',
 	st.session_state["nuid"] = 1
 	st.switch_page('pages/page10_student_home.py')
 
-if st.button('Act as System Administrator', 
-            type = 'primary', 
-            use_container_width=True):
-	st.session_state['authenticated'] = True
-	st.session_state['role'] = 'administrator'
-	st.session_state['first_name'] = 'SysAdmin'
-	st.switch_page('pages/page20_admin_home.py')
+if st.button('Act as Olivia, System Administrator',
+             type='primary', use_container_width=True):
+    st.session_state['authenticated'] = True
+    st.session_state['role'] = 'administrator'
+    st.session_state['first_name'] = 'Olivia'
+    st.switch_page('pages/page20_admin_home.py')
 
-if st.button('Act as System Analyst', 
+if st.button('Act as Daniel, the System Analyst',
             type = 'primary', 
             use_container_width=True):
 	st.session_state['authenticated'] = True

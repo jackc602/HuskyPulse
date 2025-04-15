@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from flask import Flask
 
 from backend.db_connection import db
@@ -15,10 +19,10 @@ from backend.application.application_routes import application_routes
 from backend.comment.comment_routes import comments
 # importing the recommendations routefor recommendations for clubs
 from backend.recommendations.recommendation_routes import recommendations
+from backend.simple.olivia_routes import bp as olivia_bp
 
 
 
-import os
 from dotenv import load_dotenv
 from backend.simple.zoe_routes import bp as zoe_bp
 def create_app():
@@ -67,7 +71,11 @@ def create_app():
     app.register_blueprint(comments, url_prefix='/comments')
     # registering the recommendations blueprint
     app.register_blueprint(recommendations, url_prefix='/recommend')
+    app.register_blueprint(olivia_bp, url_prefix='/admin')
 
     # Don't forget to return the app object
     return app
 
+if __name__ == '__main__':
+    app = create_app()
+    app.run(debug=True, port=4000)
