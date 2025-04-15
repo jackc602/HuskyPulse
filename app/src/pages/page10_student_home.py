@@ -6,12 +6,19 @@ import json
 from modules.nav import SideBarLinks
 from modules.config import get_api_base_url
 
+
 # Configure the page
 st.set_page_config(
     page_title="Student Dashboard - HuskyPulse",
     page_icon="🐺",
     layout="wide"
 )
+
+API_BASE_URL = get_api_base_url()
+
+# response = requests.get(f"{API_BASE_URL}/c/clubs")
+
+
 
 # Initialize navigation
 SideBarLinks()

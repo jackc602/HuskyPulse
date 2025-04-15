@@ -20,6 +20,7 @@ from backend.comment.comment_routes import comments
 # importing the recommendations routefor recommendations for clubs
 from backend.recommendations.recommendation_routes import recommendations
 from backend.simple.olivia_routes import bp as olivia_bp
+from backend.rsvp.rsvp_routes import rsvp
 
 
 
@@ -72,6 +73,7 @@ def create_app():
     # registering the recommendations blueprint
     app.register_blueprint(recommendations, url_prefix='/recommend')
     app.register_blueprint(olivia_bp, url_prefix='/admin')
+    app.register_blueprint(rsvp, url_prefix = "/r")
 
     # Don't forget to return the app object
     return app

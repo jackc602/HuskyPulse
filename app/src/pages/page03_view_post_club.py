@@ -35,6 +35,10 @@ for post in post_data:
     else:
         st.write("Comments:")
         st.dataframe(data = post_comments)
-    
+
+    if st.button("Edit Post", key = post["id"]):
+        st.session_state["post_to_edit"] = post["id"]
+        st.switch_page("pages/page04_edit_post.py")
+
     st.divider()
     
