@@ -4,7 +4,7 @@ from modules.nav import SideBarLinks
 
 SideBarLinks()
 
-st.title("Hawaii Club Home Page")
+st.title("Club Home Page")
 st.subheader(f"Welcome {st.session_state.first_name}")
 
 if st.button("Make a new post"):
