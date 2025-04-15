@@ -72,16 +72,6 @@ def ViewPostStudent():
 def ApplicationStudent():
     st.sidebar.page_link("pages/page12_application_student.py", label="Applications")
 
-# Student role
-def StudentHome():
-    st.sidebar.page_link("pages/41_Charlie_Home.py", label="Home")
-
-def ViewPostStudent():
-    st.sidebar.page_link("pages/page11_view_post_student.py", label="Posts")
-
-def ApplicationStudent():
-    st.sidebar.page_link("pages/page12_application_student.py", label="Applications")
-
 # Analyst role
 def AnalystHome():
     st.sidebar.page_link("pages/page30_analyst_home.py", label="Home")

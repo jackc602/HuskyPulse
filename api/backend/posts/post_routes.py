@@ -59,6 +59,39 @@ def create_post():
     response.status_code = 200
     return response
 
-# # update a post that has already been made 
-# @posts.route("/update", methods = ["POST"])
-# def update_post():
+# get a single post based on post id
+@posts.route("/posts", methods = ["GET"])
+def fetch_single_post():
+    post_id = request.args.get("post_id")
+    query = """
+    SELECT *
+    FROM post p
+    WHERE p.id = %s
+    """
+    params = (post_id)
+    cursor = db.get_db().cursor()
+    cursor.execute(query, params)
+    data = cursor.fetchall()
+    response = make_response(jsonify(data))
+    response.status_code = 200
+    return response
+
+# update a post that has already been made 
+@posts.route("/update", methods = ["POST"])
+def update_post():
+    post_data = request.json
+    query = """
+    UPDATE post
+    SET title = %s, description = %s, club_id = %s, event_id = %s, 
+    is_public = %s, image_file = %s
+    WHERE post.id = %s
+    """
+    params = (post_data["title"], post_data["description"], post_data["club_id"], 
+              post_data["event_id"], post_data["is_public"], post_data["image_file"],
+              post_data["post_id"])
+    cursor = db.get_db().cursor()
+    cursor.execute(query, params)
+    db.get_db().commit()
+    response = make_response("Successfully created new post")
+    response.status_code = 200
+    return response

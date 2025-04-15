@@ -21,7 +21,7 @@ public_status = int(st.checkbox("Public Post?"))
 
 desc = st.text_area("Description:")
 
-event = st.text_input("Event") # need another route to get events by the club, make dropdown
+event = st.text_input("Event") # TODO: need another route to get events by the club, make dropdown
 
 img = st.file_uploader("Cover Image")
 
@@ -39,7 +39,7 @@ if st.button("Upload Post"):
 
             with open(save_path, "wb") as outfile:
                 outfile.write(img.getbuffer())
-            post_data = {
+            post_data = { # TODO: add event id functionality to this
                 "is_public": public_status,
                 "club_id": st.session_state.club_id,
                 "title": name,
