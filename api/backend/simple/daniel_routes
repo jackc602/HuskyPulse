@@ -1,0 +1,40 @@
+from flask import Blueprint, jsonify
+from backend.db_connection import db
+
+bp = Blueprint("daniel", __name__)
+
+# --- Utility function to get a database connection ---
+def get_db_connection():
+    return db.connection
+
+
+# 4.4 - Collect club info
+@bp.route("/daniel/clubs", methods=["GET"])
+def get_clubs():
+    conn = get_db_connection()
+    cur = conn.cursor(dictionary=True)
+    cur.execute("""
+        SELECT id, name, type, subject, size
+        FROM club
+    """)
+    result = cur.fetchall()
+    conn.close()
+    return jsonify(result), 200
+
+
+# 4.5 - Get most popular events by RSVP count
+@bp.route("/daniel/popular-events", methods=["GET"])
+def get_popular_events():
+    conn = get_db_connection()
+    cur = conn.cursor(dictionary=True)
+    cur.execute("""
+        SELECT event_id, COUNT(event_id) AS num_students
+        FROM student_event
+        GROUP BY event_id
+        ORDER BY num_students DESC
+        LIMIT 10
+    """)
+    result = cur.fetchall()
+    conn.close()
+    return jsonify(result), 200
+

@@ -19,8 +19,11 @@ from backend.application.application_routes import application_routes
 from backend.comment.comment_routes import comments
 # importing the recommendations routefor recommendations for clubs
 from backend.recommendations.recommendation_routes import recommendations
+# importing the student routes for the student routes
+from backend.student.student_routes import student
 from backend.simple.olivia_routes import bp as olivia_bp
-from backend.rsvp.rsvp_routes import rsvp
+
+
 
 
 
@@ -72,8 +75,10 @@ def create_app():
     app.register_blueprint(comments, url_prefix='/comments')
     # registering the recommendations blueprint
     app.register_blueprint(recommendations, url_prefix='/recommend')
+    # registering the student blueprint
+    app.register_blueprint(student, url_prefix='/student')
     app.register_blueprint(olivia_bp, url_prefix='/admin')
-    app.register_blueprint(rsvp, url_prefix = "/r")
+    
 
     # Don't forget to return the app object
     return app
