@@ -57,3 +57,21 @@ def get_single_event():
     response = make_response(jsonify(data))
     response.status_code = 200
     return response
+
+# Update an event in the database based on event id
+@event.route("/update", methods = ["POST"])
+def update_event():
+    event_data = request.json
+    query = """
+    UPDATE event
+    SET name = %s, start_date = %s, end_date = %s, location_id = %s
+    WHERE event.id = %s
+    """
+    params = (event_data["name"], event_data["start_date"], event_data["end_date"], 
+              event_data["location_id"], event_data["event_id"])
+    cursor = db.get_db().cursor()
+    cursor.execute(query, params)
+    db.get_db().commit()
+    response = make_response("Successfully updated event")
+    response.status_code = 200
+    return response

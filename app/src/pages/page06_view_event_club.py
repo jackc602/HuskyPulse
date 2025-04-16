@@ -5,7 +5,14 @@ import pandas as pd
 
 SideBarLinks()
 
-st.title("Event History")
+col1, col2 = st.columns(2) 
+
+with col1:
+    st.title("Event History")
+with col2:
+    if st.button("Create Event", use_container_width = True):
+        st.switch_page("pages/page05_create_event.py")
+
 
 specifier = {"club_id": st.session_state.club_id}
 response = requests.get("http://api:4000/event/club", params = specifier)

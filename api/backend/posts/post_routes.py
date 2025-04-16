@@ -91,6 +91,6 @@ def update_post():
     cursor = db.get_db().cursor()
     cursor.execute(query, params)
     db.get_db().commit()
-    response = make_response("Successfully created new post")
+    response = make_response("Successfully updated post")
     response.status_code = 200
     return response

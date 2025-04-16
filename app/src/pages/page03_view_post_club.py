@@ -5,7 +5,13 @@ import pandas as pd
 
 SideBarLinks()
 
-st.title("Post History")
+col1, col2 = st.columns(2) 
+
+with col1:
+    st.title("Post History")
+with col2:
+    if st.button("Create Post", use_container_width = True):
+        st.switch_page("pages/page02_make_post.py")
 
 # Retrieve posts made by this club
 specifier = {"club_id": st.session_state.club_id}
