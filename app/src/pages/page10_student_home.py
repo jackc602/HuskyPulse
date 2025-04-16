@@ -202,7 +202,7 @@ with tab3:
             "Application ID": app.get("id", "Unknown"),
             "Club ID": app.get("club_id", "Unknown"),
             "Status": app.get("status", "Pending").capitalize(),
-            "Applied On": app.get("created_at", "Unknown date")
+            "Club Name": app.get("club_name", "Unnamed Club"),
         } for app in applications]
 
         app_df = pd.DataFrame(app_data)

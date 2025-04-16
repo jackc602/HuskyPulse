@@ -185,7 +185,7 @@ with tab1:
                     }
 
                     # Make the API call to log the action
-                    log_response = post_data("admin/log", log_data)
+                    log_response = post_data("admin/admin/log", log_data)
 
                     if log_response and log_response.status_code == 201:
                         # Show a progress bar for sending
@@ -247,7 +247,7 @@ with tab1:
                 st.session_state["announcement_content"] = template["content"]
                 st.session_state["target_audience"] = template["target"]
                 st.session_state["urgency_level"] = template["urgency"]
-                st.experimental_rerun()
+                #st.experimental_rerun()
 
 # Tab 2: View Feedback
 with tab2:
@@ -316,7 +316,7 @@ with tab2:
                         }
 
                         # Make the API call to log the action
-                        response = post_data("admin/log", log_data)
+                        response = post_data("admin/admin/log", log_data)
 
                         if response and response.status_code == 201:
                             st.success(f"Feedback ID {feedback_item.get('id', 0)} marked as reviewed")
@@ -357,7 +357,7 @@ with tab2:
                                         }
 
                                         # Make the API call to log the action
-                                        log_response = post_data("admin/log", log_data)
+                                        log_response = post_data("admin/admin/log", log_data)
 
                                         if log_response and log_response.status_code == 201:
                                             st.success("Reply sent successfully")
@@ -377,7 +377,7 @@ with tab3:
     st.subheader("Communication History")
 
     # Fetch logs for communication history
-    logs = fetch_data("admin/logs")
+    logs = fetch_data("admin/admin/logs")
     if logs is None:
         st.warning("Could not load logs data. Please check API connection.")
         logs = []
@@ -499,7 +499,7 @@ with st.expander("Additional Communication Tools"):
                 }
 
                 # Make the API call to log the action
-                log_response = post_data("admin/log", log_data)
+                log_response = post_data("admin/admin/log", log_data)
 
                 if success_count > 0:
                     st.success(f"Sent compliance reminders to {success_count} non-compliant clubs")

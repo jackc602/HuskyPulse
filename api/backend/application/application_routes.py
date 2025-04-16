@@ -11,7 +11,8 @@ def get_applications_by_query():
 
     if applicant_id:
         query = '''
-            SELECT * FROM application
+            SELECT a.*, c.name as club_name
+            FROM application a JOIN club c ON a.club_id = c.id
             WHERE applicant_id = %s
         '''
         cursor.execute(query, (applicant_id))
@@ -27,51 +28,46 @@ def get_applications_by_query():
 @application_routes.route('/application/club/<int:club_id>', methods=['GET'])
 def applications_by_club(club_id):
     cursor = db.get_db().cursor()
-    cursor.execute("SELECT id, club_id, status, applicant_id FROM application WHERE club_id = %s", (club_id,))
+    cursor.execute("""
+                   SELECT a.id, a.club_id as club_id, a.status as status, a.applicant_id as applicant_id,
+                   s.*
+                   FROM application a join student s on a.applicant_id = s.nuid
+                   WHERE club_id = %s"""
+                   , (club_id,))
     rows = cursor.fetchall()
     columns = [desc[0] for desc in cursor.description]
 
     return (rows)
 
 
-@application_routes.route('/application/update', methods=['POST'])
+@application_routes.route('/application/apply', methods=['POST'])
+def post_application():
+    data = request.json
+    query = '''
+        INSERT INTO application (club_id, status, applicant_id)
+        VALUES (%s, %s, %s)
+    '''
+    params = (data["club_id"], data["status"], data["applicant_id"])
+    cursor = db.get_db().cursor()
+    cursor.execute(query, params)
+    db.get_db().commit()
+    response = make_response("Successfully created new application")
+    response.status_code = 200
+    return response
+    
+
+@application_routes.route('/application/update', methods=['PUT'])
 def update_application():
     data = request.json
-    application_id = data.get('application_id')
-    new_status = data.get('status')
-    club_id = data.get('club_id')
-    applicant_id = data.get('applicant_id')
-
-    if not all([application_id, new_status, club_id, applicant_id]):
-        return jsonify({'error': 'Missing fields'}), 400
-
+    query = '''
+        UPDATE application
+        SET status = %s
+        WHERE id = %s
+    '''
+    params = (data["status"], data["id"])
     cursor = db.get_db().cursor()
-    cursor.execute("""
-        UPDATE application 
-        SET status = ?, club_id = ?, applicant_id = ? 
-        WHERE id = ?
-    """, (new_status, club_id, applicant_id, application_id))
+    cursor.execute(query, params)
     db.get_db().commit()
-    return jsonify({'message': 'Application updated successfully'}), 200
-
-
-@application_routes.route('/other', methods=['GET'])
-def get_applications_by_club():
-    club_id = request.args.get("club_id")
-
-    if not club_id:
-        return jsonify({'error': 'Missing club_id'}), 400
-
-    query = """
-        SELECT a.*, s.*
-        FROM application a
-        JOIN student s ON s.id = a.applicant_id
-        WHERE a.club_id = ?
-    """
-    cursor = db.get_db().cursor()
-    cursor.execute(query, (club_id,))
-    rows = cursor.fetchall()
-    columns = [desc[0] for desc in cursor.description]
-    result = [dict(zip(columns, row)) for row in rows]
-
-    return jsonify(result), 200
+    response = make_response("Successfully updated application")
+    response.status_code = 200
+    return response
