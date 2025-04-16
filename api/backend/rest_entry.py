@@ -28,6 +28,7 @@ from backend.rsvp.rsvp_routes import rsvp
 #importing the event route for the events
 from backend.events.event_routes import event
 from backend.simple.olivia_routes import bp as olivia_bp
+from backend.rsvp.rsvp_routes import rsvp
 
 
 

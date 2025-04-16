@@ -89,6 +89,8 @@ def AdminHome():
 def AdminCommunication():
     st.sidebar.page_link("pages/page21_admin_communication.py", label="Communication")
 
+def studentEvent():
+    st.sidebar.page_link("pages/page32_view_student_events.py", label = "Student Events")
 
 # --------------------------------Links Function -----------------------------------------------
 def SideBarLinks(show_home=False):
@@ -126,6 +128,7 @@ def SideBarLinks(show_home=False):
             StudentHome()
             ViewPostStudent()
             ApplicationStudent()
+            studentEvent()
 
         # If the user is an administrator, give them access to the administrator pages
         if st.session_state["role"] == "administrator":
