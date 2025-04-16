@@ -10,27 +10,27 @@ The issue we are trying to resolve is the lack of a centralized platform for all
 
 Our app is structured around 4 different user personas, a club leader, a student, a system administrator, and an analyst. 
 
-# Persona 1 - CLub Leader
+### Persona 1 - Club Leader
 - Make a post and display to either club members or the general public
 - Schedule club events and convey this information to attendees
 - Allow leaders to track RSVPs to their events
 - Edit events and posts
 - Receive applications to the club and notify applicants
 
-# Persona 2 - Student
+### Persona 2 - Student
 - View upcoming posts and events
 - Search through clubs by name and by interests
 - Apply to clubs that are interesting and hear back on the status of my application
 - RSVP to events I am intested in
 - Leave comments on posts
 
-# Persona 3 - Administrator
+### Persona 3 - Administrator
 - Monitor information of clubs and students
 - Receive feedback on the site from clubs and students
 - Assign user roles
 - Create database backups
 
-# Persona 4 - Analyst
+### Persona 4 - Analyst
 - Receive data driven insights about how clubs are functioning
 - Monitor booking quanitities
 - View where club demands are shifting
