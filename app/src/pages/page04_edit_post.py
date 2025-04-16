@@ -59,7 +59,7 @@ if st.button("Save Changes"):
             }
         try:
             response = requests.post("http://api:4000/p/update", json = post_data)
-            st.success("Post created Successfully!")
+            st.success("Post edited Successfully!")
             logger.info(f"Post {post_data['post_id']} was updated")
         except Exception as e:
             st.error(f"Error Making Post. {e}")

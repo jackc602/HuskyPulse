@@ -1,6 +1,7 @@
 import logging
 import streamlit as st
 import os
+import uuid
 import requests
 from datetime import datetime
 from modules.nav import SideBarLinks
@@ -9,45 +10,53 @@ logger = logging.getLogger(__name__)
 SideBarLinks()
 
 current_file = os.path.abspath(__file__)
-logger.info(f"cwd returns: {os.getcwd()} , current file returns {current_file}")
 src_dir = os.path.dirname(os.path.dirname(current_file))
-logger.info(os.getcwd())
 
-st.title("Create New Event")
+st.title("Create New Post")
 
-name = st.text_input("Event Name:")
+name = st.text_input("Title:")
 
-start_date = st.date_input("Start Date:")
-start_time = st.time_input("Start Time:")
-end_date = st.date_input("End Date:")
-end_time = st.time_input("End Time:")
+public_status = int(st.checkbox("Public Post?"))
 
-location_id = st.number_input("Location ID", min_value=1, step=1)
+desc = st.text_area("Description:")
 
-if st.button("Create Event"):
-    if not name:
-        st.error("Event must have a name.")
-    else:
-        start_datetime = datetime.combine(start_date, start_time)
-        end_datetime = datetime.combine(end_date, end_time)
+img = st.file_uploader("Cover Image")
 
-        event_data = {
-            "name": name,
-            "start_date": start_datetime.isoformat(),
-            "end_date": end_datetime.isoformat(),
-            "location_id": location_id,
-            "club_id": st.session_state.club_id
-        }
-
-        try:
-            response = requests.post("http://api:4000/p/events", json=event_data)
-            if response.status_code == 200:
-                st.success("Event created successfully!")
-                logger.info(f"Event added with data {event_data}")
-            else:
-                st.error(f"API Error: {response.status_code} - {response.text}")
-        except Exception as e:
-            st.error(f"Error creating event. {e}")
+if st.button("Upload Post"):
+     if not name or not desc:
+         st.error("Post must have a title and description.")
+     else:
+         # if user uploads an image save it to assets folder and store 
+         # the path to insert into the database
+         if img is not None:
+             file_ext = img.name.split(".")[-1]
+             img_name = f"{uuid.uuid4()}.{file_ext}"
+             save_path = os.path.join(os.getcwd(), "assets", img_name)
+ 
+             with open(save_path, "wb") as outfile:
+                 outfile.write(img.getbuffer())
+             post_data = {
+                 "is_public": public_status,
+                 "club_id": st.session_state.club_id,
+                 "title": name,
+                 "description": desc,
+                 "image_file": save_path
+             }
+         else:
+             post_data = {
+                 "is_public": public_status,
+                 "club_id": st.session_state.club_id,
+                 "title": name,
+                 "description": desc,
+                 "image_file": None
+             }
+         try:
+             response = requests.post("http://api:4000/p/posts", json = post_data)
+             if response.status_code == 200:
+                 st.success("Post created Successfully!")
+                 logger.info(f"Post added with data {post_data}")
+         except Exception as e:
+             st.error(f"Error Making Post. {e}")
 
 if st.button("Back"):
     st.switch_page("pages/page01_club_home.py")

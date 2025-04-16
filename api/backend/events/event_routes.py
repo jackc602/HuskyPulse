@@ -11,10 +11,10 @@ event = Blueprint("event", __name__)
 def create_event():
     data = request.json
     query = """
-    INSERT INTO event (id, name, start_date, end_date, location_id, club_id)
-    VALUES (%s, %s, %s, %s, %s, %s)
+    INSERT INTO event (name, start_date, end_date, location_id, club_id)
+    VALUES (%s, %s, %s, %s, %s)
     """
-    params = (data["id"], data["name"], data["start_date"], data["end_date"], 
+    params = (data["name"], data["start_date"], data["end_date"], 
               data["location_id"], data["club_id"])
     cursor = db.get_db().cursor()
     cursor.execute(query, params)

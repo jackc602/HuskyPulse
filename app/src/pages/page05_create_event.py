@@ -4,6 +4,7 @@ import os
 import requests
 from datetime import datetime
 from modules.nav import SideBarLinks
+import pandas as pd
 
 logger = logging.getLogger(__name__)
 SideBarLinks()
@@ -16,13 +17,19 @@ logger.info(os.getcwd())
 st.title("Create New Event")
 
 name = st.text_input("Event Name:")
-id = st.number_input("Event ID", min_value=1, step=1)
 start_date = st.date_input("Start Date:")
 start_time = st.time_input("Start Time:")
 end_date = st.date_input("End Date:")
 end_time = st.time_input("End Time:")
 
-location_id = st.number_input("Location ID", min_value=1, step=1)
+locations = pd.DataFrame(requests.get("http://api:4000/location/location").json())
+
+building_options = locations["building"].unique()
+building = st.selectbox("Building", options = building_options)
+
+room_options = locations[locations["building"] == building]["room_num"]
+room = st.selectbox("Room Number", options = room_options)
+
 
 if st.button("Create Event"):
     if not name:
@@ -30,13 +37,15 @@ if st.button("Create Event"):
     else:
         start_datetime = datetime.combine(start_date, start_time)
         end_datetime = datetime.combine(end_date, end_time)
+        
+        building = locations[locations["building"] == building]
+        loc_id = building[building["room_num"] == room]["id"].iloc[0]
 
         event_data = {
-            "id": id,
             "name": name,
             "start_date": start_datetime.isoformat(),
             "end_date": end_datetime.isoformat(),
-            "location_id": location_id,
+            "location_id": int(loc_id),
             "club_id": st.session_state.club_id
         }
 

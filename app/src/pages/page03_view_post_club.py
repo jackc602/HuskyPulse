@@ -34,7 +34,7 @@ for post in post_data:
         st.write("No Comments Made")
     else:
         st.write("Comments:")
-        st.dataframe(data = post_comments)
+        st.dataframe(data = post_comments, hide_index = True)
 
     if st.button("Edit Post", key = post["id"]):
         st.session_state["post_to_edit"] = post["id"]

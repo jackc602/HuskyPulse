@@ -29,5 +29,5 @@ for event in event_data:
         st.write("No RSVPs yet")
     else:
         st.write("**RSVPs**    Count:", event_rsvps.shape[0])
-        st.dataframe(data = event_rsvps)
+        st.dataframe(data = event_rsvps, hide_index = True)
     st.divider()

@@ -53,7 +53,7 @@ create table if not exists location(
 );
 
 create table if not exists event(
-    id int primary key not null,
+    id int primary key not null auto_increment,
     name varchar(50) not null,
     start_date datetime not null,
     end_date datetime not null,
