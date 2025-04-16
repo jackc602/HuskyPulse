@@ -174,7 +174,7 @@ with col2:
 
         if st.button("👥 Manage Members", use_container_width=True):
             # In a real implementation, this would link to a member management page
-            st.info("Feature coming soon")
+            st.info("Club editing feature coming soon")
 
     with col_b:
         if st.button("📅 Create Event", use_container_width=True):
@@ -182,7 +182,7 @@ with col2:
             st.switch_page("pages/page05_create_event.py")
 
         if st.button("📨 View Applications", use_container_width=True):
-            st.switch_page("pages/page05_manage_applications.py")
+            st.switch_page("pages/page07_view_applications.py")
 
     # Recent activity (simulated since we don't have actual activity data)
     st.subheader("Recent Activity")
