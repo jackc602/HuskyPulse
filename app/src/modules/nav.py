@@ -62,6 +62,9 @@ def ClubHome():
 def ViewPostClub():
     st.sidebar.page_link("pages/page03_view_post_club.py", label="Posts")
 
+def ViewEventClub():
+    st.sidebar.page_link("pages/page06_view_event_club.py", label="Events")
+
 # Student role
 def StudentHome():
     st.sidebar.page_link("pages/page10_student_home.py", label="Home")
@@ -115,6 +118,7 @@ def SideBarLinks(show_home=False):
         if st.session_state["role"] == "club_leader":
             ClubHome()
             ViewPostClub()
+            ViewEventClub()
 
         
         # student sidebar

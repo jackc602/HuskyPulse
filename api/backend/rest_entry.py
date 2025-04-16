@@ -23,6 +23,7 @@ from backend.recommendations.recommendation_routes import recommendations
 from backend.student.student_routes import student
 # importing the location routes for the location routes
 from backend.location.location_routes import location
+from backend.rsvp.rsvp_routes import rsvp
 
 #importing the event route for the events
 from backend.events.event_routes import event
@@ -87,6 +88,7 @@ def create_app():
     #registering the event blueprint
     app.register_blueprint(event, url_prefix='/event')
     app.register_blueprint(olivia_bp, url_prefix='/admin')
+    app.register_blueprint(rsvp, url_prefix = "/rsvp")
     
 
     # Don't forget to return the app object

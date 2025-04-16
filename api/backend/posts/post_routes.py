@@ -7,7 +7,6 @@ from backend.db_connection import db
 posts = Blueprint("posts", __name__)
 
 # retrieve all posts that should be visible to a given student
-# REQUIRES PARAMS WHEN REQUEST IS MADE ON FRONTEND
 @posts.route("/posts/student", methods = ["GET"])
 def fetch_posts():
     student_NUID = request.args.get("nuid")

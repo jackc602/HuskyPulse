@@ -6,8 +6,6 @@ from backend.db_connection import db
 
 event = Blueprint("event", __name__)
 
-
-
 # create an event in the database
 @event.route("/event", methods = ["POST"])
 def create_event():
@@ -25,3 +23,20 @@ def create_event():
     response.status_code = 200
     return response
 
+# Get all events had by a certain club
+@event.route("/club", methods = ["GET"])
+def get_events():
+    daclub_id = request.args.get("club_id")
+    query = """
+    SELECT * 
+    FROM event e JOIN location l
+    ON e.location_id = l.id
+    WHERE club_id = %s
+    """
+    params = (daclub_id)
+    cursor = db.get_db().cursor()
+    cursor.execute(query, params)
+    data = cursor.fetchall()
+    response = make_response(jsonify(data))
+    response.status_code = 200
+    return response

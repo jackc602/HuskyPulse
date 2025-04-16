@@ -421,7 +421,7 @@ INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `clu
 INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (2, "Relay For Life", "2023-05-09", "2024-08-20", 99, 68);
 INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (3, "Lunar New Year Celebration", "2023-11-10", "2024-10-14", 89, 83);
 INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (4, "TechTogether Boston", "2023-06-04", "2024-04-25", 96, 34);
-INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (5, "Relay For Life", "2023-07-18", "2024-07-09", 42, 19);
+INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (5, "Relay For Life", "2023-07-18", "2024-07-09", 42, 1);
 INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (6, "Husky Startup Challenge", "2023-04-04", "2024-11-19", 97, 62);
 INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (7, "Spring Carnival", "2023-04-24", "2024-09-13", 12, 25);
 INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (8, "Homecoming", "2024-01-22", "2025-02-05", 65, 98);
@@ -432,8 +432,8 @@ INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `clu
 INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (13, "Career Fair", "2023-08-20", "2024-09-26", 1, 9);
 INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (14, "Mental Health Awareness Week", "2023-12-03", "2024-05-17", 16, 21);
 INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (15, "MLK Day of Service", "2023-11-20", "2025-02-11", 49, 80);
-INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (16, "Fall Fest", "2023-10-09", "2024-12-31", 20, 32);
-INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (17, "Husky Hunt", "2023-12-10", "2025-02-02", 35, 46);
+INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (16, "Fall Fest", "2023-10-09", "2024-12-31", 20, 1);
+INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (17, "Husky Hunt", "2023-12-10", "2025-02-02", 35, 1);
 INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (18, "Spring Carnival", "2023-11-27", "2024-12-27", 76, 40);
 INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (19, "Mental Health Awareness Week", "2024-03-27", "2024-04-09", 17, 12);
 INSERT INTO `event` (`id`, `name`, `start_date`, `end_date`, `location_id`, `club_id`) VALUES (20, "Latinx Heritage Month", "2023-04-20", "2025-03-26", 77, 18);
