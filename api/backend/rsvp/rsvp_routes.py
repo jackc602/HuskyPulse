@@ -6,6 +6,7 @@ from backend.db_connection import db
 
 rsvp = Blueprint("rsvps", __name__)
 
+# To get the rsvp information from students for an event
 @rsvp.route('/event', methods=['GET'])
 def get_rsvps():
     event_id = request.args.get("event_id")
@@ -15,10 +16,34 @@ def get_rsvps():
         JOIN student s ON se.NUID = s.NUID
         WHERE e.id = %s
     '''
-    params = (event_id)
+    params = (event_id, )
     cursor = db.get_db().cursor()
     cursor.execute(query, params)
     data = cursor.fetchall()
     response = make_response(jsonify(data))
     response.status_code = 200
     return response
+
+
+# to get the event_id and NUID from student_event
+@rsvp.route('/insert_rsvp', methods=['POST'])
+def insert_rsvp():
+    data = request.json
+    try:
+        data = request.get_json()
+        query = '''
+            INSERT into student_event (event_id, NUID)
+            VALUES (%s, %s)
+        '''
+        params = (data["event_id"], data["NUID"])
+
+        # print("Attempting to insert:", event_id, nuid)
+
+        cursor = db.get_db().cursor()
+        cursor.execute(query, params)
+        db.get_db().commit()
+        return jsonify({"message": "RSVP inserted"}), 200
+
+    except Exception as e:
+            print("Error occurred:", e)
+            return jsonify({"error": str(e)}), 500

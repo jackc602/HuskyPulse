@@ -21,7 +21,6 @@ tab1, tab2, tab3 = st.tabs(["Booking Overview", "Usage Patterns", "Recommendatio
 
 
 # Load sample data (in a real scenario, this would be fetched from the database)
-@st.cache_data
 def load_sample_data():
     # Create synthetic booking data
     np.random.seed(42)

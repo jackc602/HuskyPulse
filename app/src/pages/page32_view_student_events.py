@@ -1,50 +1,72 @@
 import streamlit as st
-import pandas as pd
 import requests
+import pandas as pd
 from modules.nav import SideBarLinks
-
-
-# Configure the page
-st.set_page_config(
-    page_title="Student_Events",
-    layout="wide"
-)
-
-
+st.set_page_config(page_title="Student RSVPs", layout="centered")
 SideBarLinks()
 
-nuid = st.session_state.get("nuid")
 
-if nuid:
+st.title("Events")
+
+# Function to fetch all student RSVP data
+def fetch_events():
     try:
-        response = requests.get("http://api:4000/rsvp")
-        if response.status_code == 200:
-            rsvps = response.json()
-            filtered = [r for r in rsvps if str(r['NUID']) == str(nuid)]
-            if filtered:
-                st.subheader("These are the Events that you have RSVPD for, along with some specific details of each event")
-                df = pd.DataFrame(filtered)
-                df.rename(columns={
-                    "name": "Event Name",
-                    "when_rsvped": "RSVP Time",
-                    "start_date": "Start Date",
-                    "end_date": "End Date",
-                    "location_id": "Location ID"
-                 }
-                 , inplace=True)
-                st.dataframe(df)
-            else:
-                st.info("You haven't RSVPed to any events yet.")
-
-        else:
-            st.error("Failed to fetch RSVP data.")
-
+        res = requests.get("http://api:4000/student_event/all_event_rsvps")
+        res.raise_for_status()
+        return res.json()
     except Exception as e:
-        st.error(f"An error occurred: {e}")
+        st.error("Failed to fetch student RSVP data.")
+        st.error(e)
+        return []
 
-else:
-    st.warning("You must me logged in or have a valid NUid to continue")
+# Fetch data and show in table
+events = fetch_events()
+
+for event in events:
+    st.subheader(event["event_name"])
+
+    st.markdown(f"""
+    **Start Date:** {event['start_date']}  
+    **End Date:** {event['end_date']}  
+    **Building:** {event['building']}  
+    **Room Number:** {event['room_num']}  
+    """)
+
+    nuid = st.session_state.get("nuid")
+
+    specifier = {"event_id": event["id"]}
+    response = requests.get("http://api:4000/rsvp/event", params=specifier)
+    response.raise_for_status()
+    event_rsvps = pd.DataFrame(response.json())
+
+    if event_rsvps.empty:
+        st.info("No RSVPs yet.")
+    else:
+        st.markdown(f"**RSVP Count:** {len(event_rsvps)}")
+        st.table(event_rsvps[["email", "first_name", "last_name", "when_rsvped"]])
+
+    # RSVP Button
+    if st.button(f"RSVP to {event['event_name']}", key=f"rsvp-{event['id']}"):
+        try:
+            res = requests.post(
+                "http://localhost:4000/rsvp/insert_rsvp",
+                json={
+                    "event_id": event["id"],
+                    "NUID": nuid
+                }
+            )
+            if res.status_code == 200:
+                st.success(f"You RSVPed to {event['event_name']}!")
+            else:
+                st.warning("RSVP failed.")
+        except Exception as e:
+            st.error("Error submitting RSVP.")
+            st.error(e)
+
+
+    st.markdown("---")  
+ 
 
 
 
-
+   

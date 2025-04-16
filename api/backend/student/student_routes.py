@@ -5,7 +5,7 @@ from backend.db_connection import db
 # making the blueprint for club
 student = Blueprint('student', __name__)  
 
-# ---------------- Get all clubs ----------------
+# ---------------- Get all students ----------------
 @student.route('/student', methods=['GET'])
 def get_all_students():
     query = '''
