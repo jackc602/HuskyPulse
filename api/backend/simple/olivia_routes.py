@@ -75,7 +75,7 @@ def backup_data():
     admin_id = data.get("admin_id")
     content = data.get("content")
 
-    conn = get_db_connection()
+    conn = db.get_db()
     cur = conn.cursor()
     cur.execute("""
         INSERT INTO backup (admin_id, content)

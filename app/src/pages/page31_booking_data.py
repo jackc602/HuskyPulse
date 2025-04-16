@@ -339,7 +339,7 @@ with tab2:
     fig = px.imshow(
         pivot_data,
         labels=dict(x="Hour of Day", y="Day of Week", color="Number of Bookings"),
-        x=[f"{h}:00" for h in range(8, 22)],
+        x=pivot_data.columns,
         y=day_order,
         color_continuous_scale="viridis",
         title="Booking Intensity by Day and Hour"

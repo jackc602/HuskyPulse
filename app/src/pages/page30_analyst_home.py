@@ -147,16 +147,19 @@ with tab2:
     # Create pivot table
     pivot_data = hour_day_counts.pivot(index='Day', columns='Hour', values='Count').fillna(0)
     pivot_data = pivot_data.reindex(day_order)
+    
 
     # Create heatmap
     fig = px.imshow(
         pivot_data,
         labels=dict(x="Hour of Day", y="Day of Week", color="Number of Bookings"),
-        x=[f"{h}:00" for h in range(8, 22)],
+        x=pivot_data.columns,  # 14 labels: 8 to 21
         y=day_order,
         color_continuous_scale="viridis"
     )
+
     st.plotly_chart(fig, use_container_width=True)
+    
 
     # Event type distribution
     st.subheader("Bookings by Event Type")

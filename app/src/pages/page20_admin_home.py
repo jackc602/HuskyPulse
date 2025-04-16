@@ -291,7 +291,7 @@ with st.expander("Assign User Roles"):
                 }
 
                 # Make the API call to assign role
-                response = requests.post(f"{API_BASE_URL}/admin/assign-role", json=role_data)
+                response = requests.post(f"{API_BASE_URL}/admin/admin/assign-role", json=role_data)
 
                 if response.status_code == 201:
                     st.success(f"Role '{selected_role}' assigned to user ID {user_id}")
@@ -333,7 +333,7 @@ with st.expander("System Maintenance"):
                     }
 
                     # Make the API call to log the action
-                    response = requests.post(f"{API_BASE_URL}/admin/log", json=log_data)
+                    response = requests.post(f"{API_BASE_URL}/admin/admin/log", json=log_data)
 
                     if response.status_code == 201:
                         st.success(f"Maintenance scheduled for {maintenance_date} at {maintenance_start}")
@@ -363,7 +363,7 @@ with st.expander("Database Backup"):
                 }
 
                 # Make the API call to create backup
-                response = requests.post(f"{API_BASE_URL}/admin/backup", json=backup_data)
+                response = requests.post(f"{API_BASE_URL}/admin/admin/backup", json=backup_data)
 
                 if response.status_code == 201:
                     # Show progress bar animation
