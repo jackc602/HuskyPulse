@@ -40,3 +40,20 @@ def get_events():
     response = make_response(jsonify(data))
     response.status_code = 200
     return response
+
+# Get a certain event based on id
+@event.route("", methods = ["GET"])
+def get_single_event():
+    event_id = request.args.get("event_id")
+    query = """
+    SELECT *
+    FROM event e
+    WHERE e.id = %s
+    """
+    params = (event_id)
+    cursor = db.get_db().cursor()
+    cursor.execute(query, params)
+    data = cursor.fetchall()
+    response = make_response(jsonify(data))
+    response.status_code = 200
+    return response

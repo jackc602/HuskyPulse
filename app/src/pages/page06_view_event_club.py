@@ -30,4 +30,8 @@ for event in event_data:
     else:
         st.write("**RSVPs**    Count:", event_rsvps.shape[0])
         st.dataframe(data = event_rsvps, hide_index = True)
+
+    if st.button("Edit Event", key = event["id"]):
+        st.session_state["event_to_edit"] = event["id"]
+        st.switch_page("pages/page08_edit_event.py")
     st.divider()
