@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, make_response
 from backend.db_connection import db
 
 application_routes = Blueprint('application_routes', __name__)
@@ -12,15 +12,16 @@ def get_applications_by_query():
     if applicant_id:
         query = '''
             SELECT * FROM application
-            WHERE applicant_id = ?
+            WHERE applicant_id = %s
         '''
-        cursor.execute(query, (applicant_id,))
+        cursor.execute(query, (applicant_id))
     else:
         cursor.execute('SELECT * FROM application')
 
-    results = cursor.fetchall()
-    columns = [desc[0] for desc in cursor.description]
-    return jsonify([dict(zip(columns, row)) for row in results])
+    data = cursor.fetchall()
+    response = make_response(jsonify(data))
+    response.status_code = 200
+    return response
 
 
 @application_routes.route('/application/club/<int:club_id>', methods=['GET'])
