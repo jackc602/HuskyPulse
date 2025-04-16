@@ -7,6 +7,7 @@ import time
 import json
 from modules.nav import SideBarLinks
 from modules.config import get_api_base_url
+import numpy as np
 
 # Configure the page
 st.set_page_config(

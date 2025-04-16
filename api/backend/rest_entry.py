@@ -23,6 +23,9 @@ from backend.recommendations.recommendation_routes import recommendations
 from backend.student.student_routes import student
 # importing the location routes for the location routes
 from backend.location.location_routes import location
+
+#importing the event route for the events
+from backend.events.event_routes import event
 from backend.simple.olivia_routes import bp as olivia_bp
 
 
@@ -81,7 +84,8 @@ def create_app():
     app.register_blueprint(student, url_prefix='/student')
     #registering the location blueprint
     app.register_blueprint(location, url_prefix='/location')
-
+    #registering the event blueprint
+    app.register_blueprint(event, url_prefix='/event')
     app.register_blueprint(olivia_bp, url_prefix='/admin')
     
 

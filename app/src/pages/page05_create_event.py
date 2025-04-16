@@ -16,7 +16,7 @@ logger.info(os.getcwd())
 st.title("Create New Event")
 
 name = st.text_input("Event Name:")
-
+id = st.number_input("Event ID", min_value=1, step=1)
 start_date = st.date_input("Start Date:")
 start_time = st.time_input("Start Time:")
 end_date = st.date_input("End Date:")
@@ -32,6 +32,7 @@ if st.button("Create Event"):
         end_datetime = datetime.combine(end_date, end_time)
 
         event_data = {
+            "id": id,
             "name": name,
             "start_date": start_datetime.isoformat(),
             "end_date": end_datetime.isoformat(),
@@ -40,7 +41,7 @@ if st.button("Create Event"):
         }
 
         try:
-            response = requests.post("http://api:4000/p/events", json=event_data)
+            response = requests.post("http://api:4000/event/event", json=event_data)
             if response.status_code == 200:
                 st.success("Event created successfully!")
                 logger.info(f"Event added with data {event_data}")

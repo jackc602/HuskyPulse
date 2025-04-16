@@ -179,7 +179,7 @@ with col2:
     with col_b:
         if st.button("📅 Create Event", use_container_width=True):
             # In a real implementation, this would link to an event creation page
-            st.info("Feature coming soon")
+            st.switch_page("pages/page05_create_event.py")
 
         if st.button("📨 View Applications", use_container_width=True):
             st.switch_page("pages/page05_manage_applications.py")
