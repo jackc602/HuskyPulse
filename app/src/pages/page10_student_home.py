@@ -101,7 +101,7 @@ with tab1:
                                 st.write(response.status_code)
                             except Exception as e:
                                 st.error(f"Error submitting comment: {e}")
-                            # st.success("Comment Posted")
+                            st.success("Comment Posted")
                         else:
                             st.warning("Please enter a comment.")
 
