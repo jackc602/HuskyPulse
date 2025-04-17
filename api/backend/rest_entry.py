@@ -28,10 +28,11 @@ from backend.events.event_routes import event
 from backend.simple.olivia_routes import bp as olivia_bp
 from backend.rsvp.rsvp_routes import rsvp
 from backend.student_events.student_events import student_events
+from backend.simple.zoe_routes import bp as zoe_bp
 
 
 from dotenv import load_dotenv
-from backend.simple.zoe_routes import bp as zoe_bp
+
 def create_app():
     app = Flask(__name__)
     app.register_blueprint(zoe_bp)
