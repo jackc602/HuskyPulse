@@ -27,13 +27,12 @@ SideBarLinks()
 API_BASE_URL = get_api_base_url()
 
 
-# Function to fetch data from API with error handling
+# Function to fetch data from API with given endpoint and optional params
 def fetch_data(endpoint, params=None):
     try:
         full_url = f"{API_BASE_URL}/{endpoint}"
-        st.write(f"Debug - Accessing: {full_url} with params: {params}")
         response = requests.get(full_url, params=params)
-        response.raise_for_status()  # Raise exception for HTTP errors
+        response.raise_for_status()  
         return response.json()
     except requests.exceptions.RequestException as e:
         st.error(f"Could not connect to API: {e}")
@@ -53,20 +52,17 @@ st.markdown("#### Your HuskyPulse Dashboard")
 # Create tabs for different sections
 tab1, tab2, tab3 = st.tabs(["📣 Feed", "🔍 Discover Clubs", "📋 My Applications"])
 
-# Tab 1: Feed - Show posts from clubs the student is a member of or has shown interest in
+
 with tab1:
-    # Get current student's NUID
     student_id = st.session_state.get("nuid", 1)
 
-    # Fetch posts that should be visible to this student
     st.subheader("Latest Club Posts")
 
-    # Attempt to fetch posts from the API
     posts = fetch_data("p/posts/student", {"nuid": student_id})
 
     if not posts:
         st.info("No posts found. This could be due to an API connection issue or no available posts.")
-        posts = []  # Set to empty list if None
+        posts = [] 
 
     if len(posts) == 0:
         st.info("No posts to display. Join some clubs to see their posts here!")
@@ -88,32 +84,24 @@ with tab1:
                 </div>
                 """, unsafe_allow_html=True)
 
-                col1, col2, col3 = st.columns([1, 1, 2])
-                with col1:
-                    if st.button("👍 Like", key=f"like_{post.get('id', 0)}"):
-                        st.success("Post liked!")
-                with col2:
-                    if st.button("💬 Comment", key=f"comment_{post.get('id', 0)}"):
-                        st.session_state[f"commenting_{post.get('id', 0)}"] = True
-                with col3:
-                    pass
+                if st.button("💬 Comment", key=f"comment_{post.get('id', 0)}"):
+                    st.session_state[f"commenting_{post.get('id', 0)}"] = True
 
-                # Show comment box if the comment button was clicked
                 if st.session_state.get(f"commenting_{post.get('id', 0)}", False):
                     comment = st.text_area("Your comment:", key=f"comment_text_{post.get('id', 0)}")
                     if st.button("Submit Comment", key=f"submit_comment_{post.get('id', 0)}"):
                         if comment:
                             try:
-                                # Current date in the format expected by your database
-                                current_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-
-                                # Create a new comment entry
-                                # Note: In a real implementation, you would need a POST endpoint to add comments
-                                st.info("In a complete implementation, this would add your comment to the database")
-                                st.success("Comment submitted!")
-                                st.session_state[f"commenting_{post.get('id', 0)}"] = False
+                                data = {
+                                    "nuid": st.session_state.nuid,
+                                    "comment": str(comment),
+                                    "post_id": int(post["id"])
+                                }
+                                response = requests.post("http://api:4000/comments/post", json = data)
+                                st.write(response.status_code)
                             except Exception as e:
                                 st.error(f"Error submitting comment: {e}")
+                            # st.success("Comment Posted")
                         else:
                             st.warning("Please enter a comment.")
 

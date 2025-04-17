@@ -35,3 +35,25 @@ def get_post_comments():
     response = make_response(jsonify(data))
     response.status_code = 200
     return response
+
+# Create a comment on a given post
+@comments.route("/post", methods = ["POST"])
+def make_comment():
+    data = request.json
+    query1 = """
+    INSERT INTO comment (NUID, text)
+    VALUES (%s, %s)
+    """
+    params1 = (data["nuid"], data["comment"])
+    query2 = """
+    INSERT INTO post_comment (post_id, comment_id)
+    VALUES (%s, %s)
+    """
+    cursor = db.get_db().cursor()
+    cursor.execute(query1, params1)
+    params2 = (data["post_id"], cursor.lastrowid)
+    cursor.execute(query2, params2)
+    db.get_db().commit()
+    response = make_response("Successfully created comment")
+    response.status_code = 200
+    return response

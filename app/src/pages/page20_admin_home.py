@@ -27,7 +27,6 @@ API_BASE_URL = get_api_base_url()
 def fetch_data(endpoint, params=None):
     try:
         full_url = f"{API_BASE_URL}/{endpoint}"
-        st.write(f"Debug - Fetching from: {full_url}")
         response = requests.get(full_url, params=params)
         response.raise_for_status()
         return response.json()
@@ -43,7 +42,7 @@ def fetch_data(endpoint, params=None):
 
 
 # Main header with welcome message
-st.title(f"Welcome, {st.session_state.first_name}! ⚙️")
+st.title(f"Welcome, {st.session_state.first_name}!")
 st.markdown("#### System Administration Dashboard")
 
 # Add system overview section
@@ -96,155 +95,36 @@ with col4:
         delta_color="normal" if clubs or students else "inverse"
     )
 
-# Create a dashboard layout
-left_col, right_col = st.columns([2, 1])
 
-# Left column - System activity (mock data since we don't have historical metrics)
-with left_col:
-    st.subheader("System Activity")
 
-    # Generate sample data for the chart
-    days = 30
-    dates = pd.date_range(start=datetime.now() - timedelta(days=days - 1), periods=days, freq='D')
+st.subheader("System Status")
 
-    # Generate random data for user logins, club posts, and event registrations
-    np.random.seed(42)  # For reproducibility
-    user_logins = np.random.randint(30, 100, size=days)
-    club_posts = np.random.randint(10, 30, size=days)
-    event_registrations = np.random.randint(15, 50, size=days)
+# System status indicators
+status_data = [
+    {"name": "API Server", "status": "Online" if clubs or students else "Issues Detected"},
+    {"name": "Database", "status": "Online" if clubs or students else "Issues Detected"},
+    {"name": "Web App", "status": "Online"},
+]
 
-    # Create a DataFrame
-    chart_data = pd.DataFrame({
-        'Date': dates,
-        'User Logins': user_logins,
-        'Club Posts': club_posts,
-        'Event Registrations': event_registrations
-    })
-
-    # Melt the DataFrame for Altair
-    chart_data_melted = pd.melt(
-        chart_data,
-        id_vars=['Date'],
-        value_vars=['User Logins', 'Club Posts', 'Event Registrations'],
-        var_name='Metric',
-        value_name='Count'
-    )
-
-    # Create a line chart using Altair
-    chart = alt.Chart(chart_data_melted).mark_line().encode(
-        x=alt.X('Date:T', title='Date'),
-        y=alt.Y('Count:Q', title='Count'),
-        color=alt.Color('Metric:N', legend=alt.Legend(title="Metrics")),
-        tooltip=['Date:T', 'Metric:N', 'Count:Q']
-    ).properties(
-        height=300
-    ).interactive()
-
-    st.altair_chart(chart, use_container_width=True)
-
-# Right column - System status and alerts
-with right_col:
-    st.subheader("System Status")
-
-    # System status indicators
-    status_data = [
-        {"name": "API Server", "status": "Online" if clubs or students else "Issues Detected", "uptime": "99.9%"},
-        {"name": "Database", "status": "Online" if clubs or students else "Issues Detected", "uptime": "100%"},
-        {"name": "Web App", "status": "Online", "uptime": "99.7%"},
-        {"name": "File Storage", "status": "Online", "uptime": "99.8%"}
-    ]
-
-    for item in status_data:
-        status_color = "green" if item["status"] == "Online" else "red"
-        st.markdown(f"""
-        <div style="
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-            border: 1px solid #dee2e6;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        ">
-            <div>
-                <span style="font-weight: bold;">{item["name"]}</span>
-            </div>
-            <div>
-                <span style="color: {status_color}; font-weight: bold;">{item["status"]}</span>
-                <span style="margin-left: 10px; color: #6c757d; font-size: 12px;">{item["uptime"]} uptime</span>
-            </div>
+for item in status_data:
+    status_color = "green" if item["status"] == "Online" else "red"
+    st.markdown(f"""
+    <div style="
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    ">
+        <div>
+            <span style="font-weight: bold;">{item["name"]}</span>
         </div>
-        """, unsafe_allow_html=True)
-
-    # Most recent system alerts
-    st.subheader("Recent Alerts")
-
-    # Check if we have any API issues to report
-    if not clubs and not students:
-        alerts = [
-            {"level": "Error", "message": "API connection issues detected", "time": "Just now"}
-        ]
-    else:
-        alerts = [
-            {"level": "Info", "message": "System running normally", "time": "Just now"},
-            {"level": "Info", "message": "Database backup completed", "time": "Yesterday"},
-            {"level": "Info", "message": "System update completed", "time": "3 days ago"}
-        ]
-
-    for alert in alerts:
-        if alert["level"] == "Error":
-            color = "#dc3545"
-            icon = "🔴"
-        elif alert["level"] == "Warning":
-            color = "#ffc107"
-            icon = "⚠️"
-        else:
-            color = "#0dcaf0"
-            icon = "ℹ️"
-
-        st.markdown(f"""
-        <div style="
-            padding: 10px;
-            border-left: 4px solid {color};
-            margin-bottom: 10px;
-            background-color: #f8f9fa;
-            border-radius: 0 5px 5px 0;
-        ">
-            <p style="margin: 0; font-size: 14px;">
-                <span style="font-weight: bold;">{icon} {alert["level"]}: {alert["message"]}</span><br>
-                <span style="color: #6c757d; font-size: 12px;">{alert["time"]}</span>
-            </p>
+        <div>
+            <span style="color: {status_color}; font-weight: bold;">{item["status"]}</span>
         </div>
-        """, unsafe_allow_html=True)
-
-# Quick action buttons
-st.subheader("Quick Actions")
-
-# Create a row of action buttons
-col1, col2, col3, col4 = st.columns(4)
-
-with col1:
-    if st.button("👥 User Management", use_container_width=True):
-        # In a real implementation, this would navigate to a user management page
-        st.session_state["page"] = "user_management"
-        st.info("User management feature coming soon")
-
-with col2:
-    if st.button("📊 System Logs", use_container_width=True):
-        # In a real implementation, this would navigate to a system logs page
-        st.session_state["page"] = "system_logs"
-        st.info("System logs feature coming soon")
-
-with col3:
-    if st.button("✓ Compliance Management", use_container_width=True):
-        # Navigate to compliance management page
-        st.session_state["page"] = "compliance"
-        st.switch_page("pages/page23_compliance.py")
-
-with col4:
-    if st.button("📢 Send Announcement", use_container_width=True):
-        # Navigate to announcements page
-        st.session_state["page"] = "announcements"
-        st.switch_page("pages/page21_admin_communication.py")
+    </div>
+    """, unsafe_allow_html=True)
 
 # Club management section
 st.subheader("Club Management")

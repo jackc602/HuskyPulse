@@ -29,21 +29,14 @@ def get_rsvps():
 @rsvp.route('/insert_rsvp', methods=['POST'])
 def insert_rsvp():
     data = request.json
-    try:
-        data = request.get_json()
-        query = '''
-            INSERT into student_event (event_id, NUID)
-            VALUES (%s, %s)
-        '''
-        params = (data["event_id"], data["NUID"])
-
-        # print("Attempting to insert:", event_id, nuid)
-
-        cursor = db.get_db().cursor()
-        cursor.execute(query, params)
-        db.get_db().commit()
-        return jsonify({"message": "RSVP inserted"}), 200
-
-    except Exception as e:
-            print("Error occurred:", e)
-            return jsonify({"error": str(e)}), 500
+    query = """
+    INSERT INTO student_event (NUID, event_id)
+    VALUES (%s, %s)
+    """
+    params = (data["NUID"], data["event_id"])
+    cursor = db.get_db().cursor()
+    cursor.execute(query, params)
+    db.get_db().commit()
+    response = make_response("Successfully created RSVP instance")
+    response.status_code = 200
+    return response

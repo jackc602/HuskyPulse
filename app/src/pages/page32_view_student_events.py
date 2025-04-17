@@ -47,21 +47,19 @@ for event in events:
 
     # RSVP Button
     if st.button(f"RSVP to {event['event_name']}", key=f"rsvp-{event['id']}"):
-        try:
-            res = requests.post(
-                "http://localhost:4000/rsvp/insert_rsvp",
-                json={
-                    "event_id": event["id"],
-                    "NUID": nuid
-                }
-            )
-            if res.status_code == 200:
-                st.success(f"You RSVPed to {event['event_name']}!")
-            else:
-                st.warning("RSVP failed.")
-        except Exception as e:
-            st.error("Error submitting RSVP.")
-            st.error(e)
+        # try:
+        res = requests.post(
+            "http://api:4000/rsvp/insert_rsvp",
+            json={
+                "event_id": event["id"],
+                "NUID": nuid
+            }
+        )
+        if res.status_code == 200:
+            st.success(f"You RSVPed to {event['event_name']}!")
+        else:
+            st.write(res.status_code)
+            st.warning("RSVP failed.")
 
 
     st.markdown("---")  

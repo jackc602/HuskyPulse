@@ -92,9 +92,9 @@ create table if not exists post(
 );
 
 create table if not exists comment(
-    id int not null primary key,
+    id int not null primary key AUTO_INCREMENT,
     NUID int not null,
-    date datetime not null,
+    date DATETIME DEFAULT CURRENT_TIMESTAMP,
     text varchar(500) not null,
     constraint fk9 foreign key (NUID) references student(NUID)
         ON UPDATE CASCADE ON DELETE CASCADE
