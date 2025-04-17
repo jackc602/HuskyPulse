@@ -75,3 +75,19 @@ def update_event():
     response = make_response("Successfully updated event")
     response.status_code = 200
     return response
+
+# delete an event in the database
+@event.route("/delete", methods = ["DELETE"])
+def delete_event():
+    data = request.json
+    query = """
+    DELETE FROM event 
+    WHERE id = %s
+    """
+    params = (data["event_id"])
+    cursor = db.get_db().cursor()
+    cursor.execute(query, params)
+    db.get_db().commit()
+    response = make_response(f"Successfully deleted event {data['event_id']}")
+    response.status_code = 200
+    return response

@@ -3,7 +3,7 @@ from backend.db_connection import db
 
 application_routes = Blueprint('application_routes', __name__)
 
-
+# Retrieve the applications made by a certain user
 @application_routes.route('/applications', methods=['GET'])
 def get_applications_by_query():
     applicant_id = request.args.get('applicant_id')

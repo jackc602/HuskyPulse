@@ -13,7 +13,6 @@ response = requests.get("http://api:4000/event", params = specifier)
 event_data = response.json()[0]
 
 st.title("Edit Event")
-st.write(event_data)
 
 name = st.text_input("Name:", value = event_data["name"])
 
@@ -53,6 +52,16 @@ if st.button("Save Changes"):
             logger.info(f"Event {event_data['event_id']} was updated")
         except Exception as e:
             st.error(f"Error editing event. {e}")
+
+if st.button("Delete Event"):
+    try:
+        specifier = {"event_id": st.session_state.event_to_edit}
+        response = requests.delete("http://api:4000/event/delete", json = specifier)
+        st.success("Event Deleted")
+    except Exception as e:
+        st.error(f"Error deleting event. {e}")
+    
+
 
 if st.button("Back"):
     st.switch_page("pages/page06_view_event_club.py")

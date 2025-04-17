@@ -71,7 +71,7 @@ create table if not exists student_event(
     when_rsvped DATETIME DEFAULT CURRENT_TIMESTAMP,
     primary key (event_id, NUID),
     constraint fk5 foreign key (event_id) references event(id)
-        ON UPDATE CASCADE ON DELETE RESTRICT,
+        ON UPDATE CASCADE ON DELETE CASCADE,
     constraint fk6 foreign key (NUID) references student(NUID)
         ON UPDATE CASCADE ON DELETE RESTRICT
 );
@@ -88,7 +88,7 @@ create table if not exists post(
     constraint fk7 foreign key (club_id) references club(id)
         ON UPDATE CASCADE ON DELETE CASCADE,
     constraint fk8 foreign key (event_id) references event(id)
-        ON UPDATE CASCADE
+        ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 create table if not exists comment(
@@ -104,7 +104,8 @@ create table if not exists post_comment(
     post_id int not null,
     comment_id int not null,
     primary key (post_id, comment_id),
-    constraint fk10 foreign key (post_id) references post(id),
+    constraint fk10 foreign key (post_id) references post(id)
+        ON DELETE CASCADE,
     constraint fk11 foreign key (comment_id) references comment(id)
 );
 
