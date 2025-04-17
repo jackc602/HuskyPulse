@@ -17,7 +17,7 @@ st.title(f"Welcome {st.session_state.first_name}!")
 st.subheader("Analytics Dashboard")
 
 # Create tabs for different analysis sections
-tab1, tab2, tab3 = st.tabs(["Booking Overview", "Usage Patterns", "Recommendations"])
+tab1, tab2, tab3, tab4 = st.tabs(["Booking Overview", "Usage Patterns", "Recommendations", "Student Info"])
 
 
 # Load sample data (in a real scenario, this would be fetched from the database)
@@ -284,3 +284,24 @@ with st.form("custom_analysis_form"):
             st.write(f"- Buildings: {', '.join(specific_buildings)}")
         if additional_notes:
             st.write(f"- Additional Notes: {additional_notes}")
+
+with tab4:
+    st.header("Student Information")
+    st.write("This section will display student information and analytics.")
+    students = pd.DataFrame(requests.get("http://api:4000/student/student").json())
+    major_options = students["major"].unique()
+    major = st.selectbox("Major", options = major_options)
+    major_df = students[students["major"] == major] 
+    st.write(student_df)
+
+    pre_options = students["pre_professional"].unique()
+    pre = st.selectbox("Pre-Professional", options = pre_options)
+    pre_df = students[students["pre_professional"] == pre]
+    st.write(pre_df)
+
+    religion_options = students["religion"].unique()
+    religion = st.selectbox("Religion", options = religion_options)
+    religion_df = students[students["religion"] == religion]
+    st.write(religion_df)
+
+    
