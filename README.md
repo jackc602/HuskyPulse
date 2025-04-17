@@ -6,6 +6,8 @@ This is an application developed by Shrey Sahni, Yuansi Jiang, Elton Neman, and 
 
 The issue we are trying to resolve is the lack of a centralized platform for all of Northeastern's amazing student organizations to share all of their events and programs on. HuskyPulse is meant as a one stop shop for both students and clubs to be able to interact and exchange information, to run all of these groups as effciently as possible. We have implemented a lightweight frontend using python and streamlit, as well as a REST API using flask connecting the frontend to a MySQL database. The program is run entirely within docker containers. While this is not a complete piece of software, the foundation we have built encapsulates many of the essential capabilities for this platform, and hopefully one day HuskyPulse will benifit many Northeastern students.
 
+## [Video Demo](https://drive.google.com/file/d/1u3LwrY58f7rSUai8FowW2fwv5YLcyWpR/view)
+
 ## Features
 
 Our app is structured around 4 different user personas, a club leader, a student, a system administrator, and an analyst. 
