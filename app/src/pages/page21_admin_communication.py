@@ -63,10 +63,10 @@ st.markdown("#### Send announcements and manage communication with users")
 admin_id = st.session_state.get("admin_id", 1)
 
 # Create tabs for different communication functions
-tab1, tab2, tab3 = st.tabs(["Send Announcements", "View Feedback", "Communication History"])
+tab1, tab2 = st.tabs(["View Feedback", "Send Announcements"])
 
 # Tab 1: Send Announcements
-with tab1:
+with tab2:
     st.subheader("Send System Announcements")
 
     # Fetch club data for targeting announcements
@@ -250,7 +250,7 @@ with tab1:
                 #st.experimental_rerun()
 
 # Tab 2: View Feedback
-with tab2:
+with tab1:
     st.subheader("User Feedback")
 
     # Fetch feedback data
@@ -371,142 +371,6 @@ with tab2:
                                     st.error(f"An error occurred: {e}")
                             else:
                                 st.warning("Please enter a reply before sending")
-
-# Tab 3: Communication History
-with tab3:
-    st.subheader("Communication History")
-
-    # Fetch logs for communication history
-    logs = fetch_data("admin/admin/logs")
-    if logs is None:
-        st.warning("Could not load logs data. Please check API connection.")
-        logs = []
-
-    # Filter logs for communication-related entries
-    comm_logs = []
-    comm_keywords = ["announcement", "replied", "feedback", "message", "communication"]
-
-    for log in logs:
-        content = log.get("content", "").lower()
-        if any(keyword in content for keyword in comm_keywords):
-            comm_logs.append(log)
-
-    if not comm_logs:
-        st.info("No communication history found.")
-    else:
-        # Create a DataFrame for the communication logs
-        comm_data = [{
-            "Date": log.get("date_created", "Unknown"),
-            "Admin ID": log.get("admin_id", "Unknown"),
-            "Action": log.get("content", "Unknown")
-        } for log in comm_logs]
-
-        # Sort by date (most recent first)
-        comm_df = pd.DataFrame(comm_data)
-        if "Date" in comm_df.columns:
-            try:
-                comm_df["Date"] = pd.to_datetime(comm_df["Date"])
-                comm_df = comm_df.sort_values(by="Date", ascending=False)
-            except:
-                pass  # If date conversion fails, keep original order
-
-        st.dataframe(comm_df, use_container_width=True, hide_index=True)
-
-    # Export option
-    if st.button("Export Communication History"):
-        if comm_logs:
-            # Create a DataFrame for export
-            export_df = pd.DataFrame(comm_data)
-
-            # Convert to CSV for download
-            csv = export_df.to_csv(index=False).encode('utf-8')
-
-            # Provide download button
-            st.download_button(
-                label="Download CSV",
-                data=csv,
-                file_name=f"communication_history_{datetime.now().strftime('%Y%m%d')}.csv",
-                mime="text/csv"
-            )
-        else:
-            st.warning("No communication history to export.")
-
-# Admin tools section
-with st.expander("Additional Communication Tools"):
-    st.subheader("Compliance Reports")
-
-    # Fetch clubs for compliance communication
-    clubs = fetch_data("club/clubs") if "clubs" not in locals() else clubs
-    if not clubs:
-        st.warning("Could not load clubs data. Please check API connection.")
-    else:
-        # Mock compliance data (in a real implementation, this would come from the database)
-        compliance_data = []
-        for club in clubs:
-            compliance_data.append({
-                "club_id": club.get("id"),
-                "club_name": club.get("name"),
-                "status": np.random.choice(["Compliant", "Non-Compliant", "In Review"], p=[0.7, 0.1, 0.2])
-            })
-
-        # Filter non-compliant clubs
-        non_compliant = [club for club in compliance_data if club["status"] == "Non-Compliant"]
-
-        if non_compliant:
-            st.write(f"Found {len(non_compliant)} non-compliant clubs that need attention:")
-
-            for club in non_compliant:
-                st.markdown(f"""
-                <div style="
-                    padding: 10px; 
-                    border-left: 4px solid #dc3545; 
-                    margin-bottom: 10px;
-                    background-color: #f8f9fa;
-                    border-radius: 0 5px 5px 0;
-                ">
-                    <p style="margin: 0; font-size: 14px;">
-                        <span style="font-weight: bold;">{club["club_name"]} (ID: {club["club_id"]})</span><br>
-                        <span style="color: #dc3545;">Status: {club["status"]}</span>
-                    </p>
-                </div>
-                """, unsafe_allow_html=True)
-
-            # Add a button to send compliance reminders
-            if st.button("Send Compliance Reminders to Non-Compliant Clubs"):
-                success_count = 0
-
-                for club in non_compliant:
-                    # Create a feedback entry for the compliance reminder
-                    reminder_data = {
-                        "recipient_id": club["club_id"],
-                        "recipient_type": "club",
-                        "sender_id": admin_id,
-                        "sender_type": "administrator",
-                        "content": "URGENT: Your club is currently marked as Non-Compliant. Please submit the required documentation as soon as possible to maintain your active status.",
-                        "date_submitted": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                    }
-
-                    # Post the reminder
-                    response = post_data("feedback/feedback", reminder_data)
-
-                    if response and response.status_code == 201:
-                        success_count += 1
-
-                # Log the action
-                log_data = {
-                    "admin_id": admin_id,
-                    "content": f"Sent compliance reminders to {success_count} non-compliant clubs"
-                }
-
-                # Make the API call to log the action
-                log_response = post_data("admin/admin/log", log_data)
-
-                if success_count > 0:
-                    st.success(f"Sent compliance reminders to {success_count} non-compliant clubs")
-                else:
-                    st.error("Failed to send compliance reminders")
-        else:
-            st.success("All clubs are currently compliant or under review")
 
 # Communication guidelines section
 with st.expander("Communication Guidelines"):
